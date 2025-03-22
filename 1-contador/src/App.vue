@@ -1,13 +1,15 @@
 <template>
   <div id="app">
+    <contador></contador>
   </div>
 </template>
 
 <script>
-
+import Contador from './components/contador.vue'
 export default {
   name: 'App',
   components: {
+    Contador
   }
 }
 </script>
