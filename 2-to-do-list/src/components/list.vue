@@ -4,8 +4,9 @@
         <input class="receberTarefa" v-model="novaTarefa" @keyup.enter="adicionarTarefas" placeholder="Nova tarefa"/>
         <button class="botaoMetodoAdicionarTarefas" @click="adicionarTarefas">Adicionar tarefas</button>
         <ul>
-            <li v-for="tarefa in tarefas" :key="tarefa.id">
-                {{ tarefa }}
+            <li v-for="(tarefa, index) in tarefas" :key="tarefa.id">
+                {{ index + 1 }} - {{ tarefa }}
+                <button @click="removerTarefa(index)">X</button>
             </li>
         </ul>
     </div>
@@ -27,6 +28,9 @@
                 }else if(this.novaTarefa.trim() == ''){
                     alert('Por favor digite uma tarefa para ser adicionada')
                 }
+            },
+            removerTarefa(index){
+                this.tarefas.splice(index, 1)
             }
         }
     }
