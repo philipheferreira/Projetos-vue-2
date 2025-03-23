@@ -1,13 +1,19 @@
 <template>
   <div id="app">
+    <botaoSoma></botaoSoma>
+    <botaoSub></botaoSub>
   </div>
 </template>
 
 <script>
-
+import botaoSoma from './components/botaoSoma.vue'
+import botaoSub from './components/botaoSub.vue';
 export default {
   name: 'App',
-  components: {}
+  components: {
+    botaoSoma, 
+    botaoSub
+  }
 }
 </script>
 
