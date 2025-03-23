@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <botaoSoma></botaoSoma>
-    <botaoSub></botaoSub>
+    <input>
+    <div class="botoes">
+      <botaoSoma></botaoSoma>
+      <botaoSub></botaoSub>
+    </div>
   </div>
 </template>
 
@@ -22,8 +25,12 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.botoes{
+  display: flex;
 }
 </style>
