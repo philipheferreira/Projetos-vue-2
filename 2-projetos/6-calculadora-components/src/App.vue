@@ -1,13 +1,14 @@
 <template>
   <div id="app">
+    <calculadora></calculadora>
   </div>
 </template>
 
 <script>
-
+import calculadora from './components/calculadora.vue'
 export default {
   name: 'App',
-  components: {}
+  components: {calculadora}
 }
 </script>
 

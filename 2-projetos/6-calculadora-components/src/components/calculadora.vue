@@ -1,19 +1,19 @@
-<!-- Anotação para melhoria: Colocar o acesso aos botões de forma individuai para edição e controle -->
-
 <template>
     <div>
         <div class="calculadora">
             <input type="text" v-model="display" disabled/>
             <div class="botoes">
                 <button v-for="botao in botoes" :key="botao" @click="pressionar(botao)"> {{ botao }} </button>
-                <button @click="limpar">C</button>
+                <botao-limpar :displayLocal="display" @metodo-limpar-display="display = $event"></botao-limpar>
                 <button @click="calcular">=</button>
+                
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import botaoLimpar from './botaoLimpar.vue'
     export default {
         name: 'calculadoraComponent',
         data () {
@@ -22,6 +22,7 @@
                 botoes: ['7', '8', '9', '/', '4', '5', '6', '*', '1', '2', '3', '-', '0', '.', '+']
             }
         },
+        components: {botaoLimpar},
         methods: {
             calcular(){
                 try {
@@ -41,8 +42,8 @@
     }
 </script>
 
-<style scoped>
-body {
+<style>
+        body {
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
