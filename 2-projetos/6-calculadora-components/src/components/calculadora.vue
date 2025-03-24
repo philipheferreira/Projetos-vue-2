@@ -6,7 +6,6 @@
                 <button v-for="botao in botoes" :key="botao" @click="pressionar(botao)"> {{ botao }} </button>
                 <botao-limpar :displayLocal="display" @metodo-limpar-display="display = $event"></botao-limpar>
                 <button @click="calcular">=</button>
-                
             </div>
         </div>
     </div>
@@ -30,9 +29,6 @@ import botaoLimpar from './botaoLimpar.vue'
                 } catch (e) {
                     this.display = 'erro'
                 }
-            },
-            limpar(){
-                this.display = ''
             },
             pressionar(valor){
                 this.display += valor
