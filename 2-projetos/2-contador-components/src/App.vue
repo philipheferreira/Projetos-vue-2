@@ -2,8 +2,8 @@
   <div id="app">
     <h2>Contador: {{ contador }}</h2>
     <div class="botoes">
-      <botaoSoma :contadorLocal="contador" @adicionar-contador="contador =$event" ></botaoSoma>
-      <botaoSub></botaoSub>
+      <botaoSoma :contadorLocal="contador" @adicionar-contador= "contador = $event" ></botaoSoma>
+      <botaoSub :contadorLocal="contador" @subtrair-contador= "contador = $event"></botaoSub>
     </div>
   </div>
 </template>

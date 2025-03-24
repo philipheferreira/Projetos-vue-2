@@ -7,18 +7,13 @@
 <script>
     export default {
         name: 'botaoSomaComponent',
-        data () {
-            return{ 
-
-            }
-        },
         props: {
-            contadorLocal: Number
+            contadorLocal: Number // Define que a prop esperada é um número
         },
         methods: {
-            adicionarContador(){/* eslint-disable */
-                let novoValor = this.contadorLocal + 1;
-                this.$emit('adicionar-contador', novoValor);
+            adicionarContador(){
+                let novoValor = this.contadorLocal + 1; // nova variável criada porque a props não pode ser diretamente modificada a prop
+                this.$emit('adicionar-contador', novoValor); // $emit faz a comunicação direta com o component pai, realizando o link e atualizando o valor da variavel no pai
             }
         }
     }
