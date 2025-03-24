@@ -5,3 +5,12 @@ Para utilizar o sistema de rotas para o menu é necessário instalar o routers d
 ou
 
 * npm install vue-router@3
+
+Dicas para uso do componente botão: 
+
+* Os arquivos criados para o uso desse component são o Menu que é o principal.
+* O router que é a geração de rotas que vai ser utilizada ao longo de todo o projeto com chamadas para os acessos das rotas
+* O main que será adicionada a chamada do Router para ser renderizado no inicio da criação da instancia
+* O arquivo App que será adicionado a chamada do component menu e a chamada da funcionalidade router-view
+
+
