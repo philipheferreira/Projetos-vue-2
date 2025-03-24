@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button>Botão Soma</button>
+        <button @click="adicionarContador">Botão Soma</button>
     </div>
 </template>
 
@@ -10,6 +10,15 @@
         data () {
             return{ 
 
+            }
+        },
+        props: {
+            contadorLocal: Number
+        },
+        methods: {
+            adicionarContador(){/* eslint-disable */
+                let novoValor = this.contadorLocal + 1;
+                this.$emit('adicionar-contador', novoValor);
             }
         }
     }
