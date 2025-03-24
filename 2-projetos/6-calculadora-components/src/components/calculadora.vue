@@ -6,6 +6,7 @@
                 <button v-for="botao in botoes" :key="botao" @click="pressionar(botao)"> {{ botao }} </button>
                 <botao-limpar :displayLocal="display" @metodo-limpar-display="display = $event"></botao-limpar>
                 <button @click="calcular">=</button>
+                <botaoCalcular :displayLocal="display"></botaoCalcular>
             </div>
         </div>
     </div>
@@ -13,6 +14,7 @@
 
 <script>
 import botaoLimpar from './botaoLimpar.vue'
+import botaoCalcular from './botaoCalcular.vue'
     export default {
         name: 'calculadoraComponent',
         data () {
@@ -21,7 +23,10 @@ import botaoLimpar from './botaoLimpar.vue'
                 botoes: ['7', '8', '9', '/', '4', '5', '6', '*', '1', '2', '3', '-', '0', '.', '+']
             }
         },
-        components: {botaoLimpar},
+        components: {
+            botaoLimpar,
+            botaoCalcular
+        },
         methods: {
             calcular(){
                 try {

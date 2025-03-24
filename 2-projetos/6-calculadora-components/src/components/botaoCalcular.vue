@@ -1,6 +1,6 @@
 <template>
     <div>
-      <button>=</button>
+      <button @click="calcular">=</button>
     </div>
   </template>
   
@@ -10,14 +10,21 @@
       props: {
           displayLocal: String
       },
-      methods: {}
+      methods: {
+        calcular(){
+            try {
+                let novoValor = this.DisplayLocal
+                this.$emit('calcular', eval(novoValor))
+            } catch (e) {
+                let novoValor = 'erro'
+                this.$emit('calcular', novoValor)
+            }
+        }
+      }
   }
   </script>
   
   <style>
   
-      .botao{
-          width: 71.25px;
-      }
   
   </style>
