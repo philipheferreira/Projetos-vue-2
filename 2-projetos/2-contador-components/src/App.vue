@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <input>
+    <h2>Contador: {{ contador }}</h2>
     <div class="botoes">
-      <botaoSoma></botaoSoma>
-      <botaoSub></botaoSub>
+      <botaoSoma>Adicionar</botaoSoma>
+      <botaoSub>Subtrair</botaoSub>
     </div>
   </div>
 </template>
@@ -16,6 +16,11 @@ export default {
   components: {
     botaoSoma, 
     botaoSub
+  },
+  data () {
+    return {
+      contador: 0
+    }
   }
 }
 </script>
