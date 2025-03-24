@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button @click="adicionarContador">Botão Soma</button>
+        <button @click="adicionarContador">Botão Soma</button> <!-- Chamada direta do metodo local pelo botão -->
     </div>
 </template>
 

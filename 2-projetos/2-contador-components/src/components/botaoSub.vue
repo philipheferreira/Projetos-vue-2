@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button @click="subtrairContador">botao subtração</button>
+        <button @click="subtrairContador">botao subtração</button> <!-- Chamada direta pelo metodo com o botão -->
     </div>
 </template>
 
@@ -12,8 +12,8 @@
         },
         methods: {
             subtrairContador(){
-                let novoValor = this.contadorLocal - 1;
-                this.$emit('subtrair-contador', novoValor)
+                let novoValor = this.contadorLocal - 1; // nova variável criada porque a props não pode ser diretamente modificada a prop
+                this.$emit('subtrair-contador', novoValor) // $emit faz a comunicação direta com o component pai, realizando o link es atualizando o valor da variavel no pai
             }
         }
     }
