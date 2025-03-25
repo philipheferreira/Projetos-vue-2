@@ -12,7 +12,7 @@ export default {
         pressionarBotao9(){
             let novoValor = this.displayLocal
             novoValor += 9
-            this.$emit('', novoValor)
+            this.$emit('pressionar-botao9', novoValor)
         }
     }
 }

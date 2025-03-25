@@ -6,7 +6,6 @@
                 <button v-for="botao in botoes" :key="botao" @click="pressionar(botao)"> {{ botao }} </button>
                 <botao-limpar :displayLocal="display" @metodo-limpar-display="display = $event"></botao-limpar>
                 <button @click="calcular">=</button>
-                <botaoCalcular :displayLocal="display"></botaoCalcular>
             </div>
         </div>
         <botaoNumero7 :displayLocal="display" @pressionar-botao7="display = $event"></botaoNumero7>
@@ -21,6 +20,9 @@
         <botaoNumero2 :displayLocal="display" @pressionar-botao2="display = $event"></botaoNumero2>
         <botaoNumero3 :displayLocal="display" @pressionar-botao3="display = $event"></botaoNumero3>
         <button>-</button>
+        <button>.</button>
+        <button>+</button>
+        <botaoCalcular :displayLocal="display" @calcular="display = $event">=</botaoCalcular>
         
     </div>
 </template>
