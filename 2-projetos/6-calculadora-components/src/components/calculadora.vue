@@ -4,32 +4,41 @@
             <input type="text" v-model="display" disabled/>
             <div class="botoes">
                 <button v-for="botao in botoes" :key="botao" @click="pressionar(botao)"> {{ botao }} </button>
-                <botao-limpar :displayLocal="display" @metodo-limpar-display="display = $event"></botao-limpar>
                 <button @click="calcular">=</button>
             </div>
         </div>
-        <botaoNumero7 :displayLocal="display" @pressionar-botao7="display = $event"></botaoNumero7>
-        <botaoNumero8 :displayLocal="display" @pressionar-botao8="display = $event"></botaoNumero8>
-        <botaoNumero9 :displayLocal="display" @pressionar-botao9="display = $event"></botaoNumero9>
-        <button >/</button>
-        <botaoNumero4 :displayLocal="display" @pressionar-botao4="display = $event"></botaoNumero4>
-        <botaoNumero5 :displayLocal="display" @pressionar-botao5="display = $event"></botaoNumero5>
-        <botaoNumero6 :displayLocal="display" @pressionar-botao6="display = $event"></botaoNumero6>
-        <button>*</button>
-        <botaoNumero1 :displayLocal="display" @pressionar-botao1="display = $event"></botaoNumero1>
-        <botaoNumero2 :displayLocal="display" @pressionar-botao2="display = $event"></botaoNumero2>
-        <botaoNumero3 :displayLocal="display" @pressionar-botao3="display = $event"></botaoNumero3>
-        <button>-</button>
-        <button>.</button>
-        <button>+</button>
-        <botaoCalcular :displayLocal="display" @calcular="display = $event">=</botaoCalcular>
-        
+        <br>
+        <div class="calculadora">
+        <input type="text" v-model="display" disabled/>
+            <div class="botoes">
+                <botaoNumero7 :displayLocal="display" @pressionar-botao7="display = $event"></botaoNumero7>
+                <botaoNumero8 :displayLocal="display" @pressionar-botao8="display = $event"></botaoNumero8>
+                <botaoNumero9 :displayLocal="display" @pressionar-botao9="display = $event"></botaoNumero9>
+                <botaoDiv></botaoDiv>
+                <botaoNumero4 :displayLocal="display" @pressionar-botao4="display = $event"></botaoNumero4>
+                <botaoNumero5 :displayLocal="display" @pressionar-botao5="display = $event"></botaoNumero5>
+                <botaoNumero6 :displayLocal="display" @pressionar-botao6="display = $event"></botaoNumero6>
+                <botaoMult></botaoMult>
+                <botaoNumero1 :displayLocal="display" @pressionar-botao1="display = $event"></botaoNumero1>
+                <botaoNumero2 :displayLocal="display" @pressionar-botao2="display = $event"></botaoNumero2>
+                <botaoNumero3 :displayLocal="display" @pressionar-botao3="display = $event"></botaoNumero3>
+                <botaoSub></botaoSub>
+                <button>.</button>
+                <botaoSoma>+</botaoSoma>
+                <botao-limpar :displayLocal="display" @metodo-limpar-display="display = $event"></botao-limpar>
+                <botaoCalcular :displayLocal="display" @calcular="display = $event">=</botaoCalcular>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
 import botaoLimpar from './botaoLimpar.vue'
 import botaoCalcular from './botaoCalcular.vue'
+import botaoSoma from './botoesOperacoes/botaoSoma.vue'
+import botaoSub from './botoesOperacoes/botaoSubtracao.vue'
+import botaoMult from './botoesOperacoes/botaoMultiplicacao.vue'
+import botaoDiv from './botoesOperacoes/botaoDivisao.vue'
 import botaoNumero1 from './botoesNumeros/botao1.vue'
 import botaoNumero2 from './botoesNumeros/botao2.vue'
 import botaoNumero3 from './botoesNumeros/botao3.vue'
@@ -51,6 +60,10 @@ import botaoNumero9 from './botoesNumeros/botao9.vue'
         components: {
             botaoLimpar,
             botaoCalcular,
+            botaoSoma,
+            botaoSub,
+            botaoMult,
+            botaoDiv,
             botaoNumero1,
             botaoNumero2,
             botaoNumero3,
