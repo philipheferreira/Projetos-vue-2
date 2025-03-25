@@ -1,6 +1,6 @@
 <template>
     <q-page>
-        <button>1</button>
+        <button @click="pressionarBotao1">1</button>
     </q-page>
 </template>
 
@@ -8,12 +8,14 @@
 export default {
     name: 'botaoUmComponent',
     props: {
-
+        displayLocal: String
     }, 
     methods: {
         pressionarBotao1(){
-
-        }
+            let novoValor = this.displayLocal
+                novoValor += 1
+                this.$emit('pressionar-botao1', novoValor)
+            }
     }
 }
 </script>

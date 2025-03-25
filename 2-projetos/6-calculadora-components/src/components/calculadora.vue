@@ -9,10 +9,10 @@
                 <botaoCalcular :displayLocal="display"></botaoCalcular>
             </div>
         </div>
-        <botaoNumero1></botaoNumero1>
-        <botaoNumero2></botaoNumero2>
-        <botaoNumero3></botaoNumero3>
-        <botaoNumero4></botaoNumero4>
+        <botaoNumero1 :displayLocal="display" @pressionar-botao1="display = $event"></botaoNumero1>
+        <botaoNumero2 :displayLocal="display" @pressionar-botao2="display = $event"></botaoNumero2>
+        <botaoNumero3 :displayLocal="display" @pressionar-botao3="display = $event"></botaoNumero3>
+        <botaoNumero4 :displayLocal="display" @pressionar-botao4="display = $event"></botaoNumero4>
         <botaoNumero5></botaoNumero5>
         <botaoNumero6></botaoNumero6>
         <botaoNumero7></botaoNumero7>
