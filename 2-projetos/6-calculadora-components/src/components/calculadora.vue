@@ -9,12 +9,14 @@
                 <botaoCalcular :displayLocal="display"></botaoCalcular>
             </div>
         </div>
+        <botaoNumero1></botaoNumero1>
     </div>
 </template>
 
 <script>
 import botaoLimpar from './botaoLimpar.vue'
 import botaoCalcular from './botaoCalcular.vue'
+import botaoNumero1 from './botoesNumeros/botao1.vue'
     export default {
         name: 'calculadoraComponent',
         data () {
@@ -25,7 +27,8 @@ import botaoCalcular from './botaoCalcular.vue'
         },
         components: {
             botaoLimpar,
-            botaoCalcular
+            botaoCalcular,
+            botaoNumero1
         },
         methods: {
             calcular(){
