@@ -10,6 +10,14 @@
             </div>
         </div>
         <botaoNumero1></botaoNumero1>
+        <botaoNumero2></botaoNumero2>
+        <botaoNumero3></botaoNumero3>
+        <botaoNumero4></botaoNumero4>
+        <botaoNumero5></botaoNumero5>
+        <botaoNumero6></botaoNumero6>
+        <botaoNumero7></botaoNumero7>
+        <botaoNumero8></botaoNumero8>
+        <botaoNumero9></botaoNumero9>
     </div>
 </template>
 
@@ -17,6 +25,15 @@
 import botaoLimpar from './botaoLimpar.vue'
 import botaoCalcular from './botaoCalcular.vue'
 import botaoNumero1 from './botoesNumeros/botao1.vue'
+import botaoNumero2 from './botoesNumeros/botao2.vue'
+import botaoNumero3 from './botoesNumeros/botao3.vue'
+import botaoNumero4 from './botoesNumeros/botao4.vue'
+import botaoNumero5 from './botoesNumeros/botao5.vue'
+import botaoNumero6 from './botoesNumeros/botao6.vue'
+import botaoNumero7 from './botoesNumeros/botao7.vue'
+import botaoNumero8 from './botoesNumeros/botao8.vue'
+import botaoNumero9 from './botoesNumeros/botao9.vue'
+
     export default {
         name: 'calculadoraComponent',
         data () {
@@ -28,7 +45,15 @@ import botaoNumero1 from './botoesNumeros/botao1.vue'
         components: {
             botaoLimpar,
             botaoCalcular,
-            botaoNumero1
+            botaoNumero1,
+            botaoNumero2,
+            botaoNumero3,
+            botaoNumero4,
+            botaoNumero5,
+            botaoNumero6,
+            botaoNumero7,
+            botaoNumero8,
+            botaoNumero9
         },
         methods: {
             calcular(){

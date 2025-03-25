@@ -1,6 +1,6 @@
 <template>
     <q-page>
-        <button>Botão 1</button>
+        <button>1</button>
     </q-page>
 </template>
 
@@ -12,7 +12,7 @@ export default {
     }, 
     methods: {
         pressionarBotao1(){
-            
+
         }
     }
 }

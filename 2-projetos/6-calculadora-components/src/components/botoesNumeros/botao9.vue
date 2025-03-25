@@ -1,10 +1,10 @@
 <template>
-    <button>5</button>
+    <button>9</button>
 </template>
 
 <script>
 export default {
-    name: 'botaoCincoComponent'
+    name: 'botaoNoveComponent'
 }
 </script>
 
