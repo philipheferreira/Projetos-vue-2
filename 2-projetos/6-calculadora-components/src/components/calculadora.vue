@@ -13,8 +13,8 @@
         <botaoNumero2 :displayLocal="display" @pressionar-botao2="display = $event"></botaoNumero2>
         <botaoNumero3 :displayLocal="display" @pressionar-botao3="display = $event"></botaoNumero3>
         <botaoNumero4 :displayLocal="display" @pressionar-botao4="display = $event"></botaoNumero4>
-        <botaoNumero5></botaoNumero5>
-        <botaoNumero6></botaoNumero6>
+        <botaoNumero5 :displayLocal="display" @pressionar-botao5="display = $event"></botaoNumero5>
+        <botaoNumero6 :displayLocal="display" @pressionar-botao6="display = $event"></botaoNumero6>
         <botaoNumero7></botaoNumero7>
         <botaoNumero8></botaoNumero8>
         <botaoNumero9></botaoNumero9>
