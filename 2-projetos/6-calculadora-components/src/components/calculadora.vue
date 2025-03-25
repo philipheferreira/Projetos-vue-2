@@ -9,15 +9,19 @@
                 <botaoCalcular :displayLocal="display"></botaoCalcular>
             </div>
         </div>
-        <botaoNumero1 :displayLocal="display" @pressionar-botao1="display = $event"></botaoNumero1>
-        <botaoNumero2 :displayLocal="display" @pressionar-botao2="display = $event"></botaoNumero2>
-        <botaoNumero3 :displayLocal="display" @pressionar-botao3="display = $event"></botaoNumero3>
+        <botaoNumero7 :displayLocal="display" @pressionar-botao7="display = $event"></botaoNumero7>
+        <botaoNumero8 :displayLocal="display" @pressionar-botao8="display = $event"></botaoNumero8>
+        <botaoNumero9 :displayLocal="display" @pressionar-botao9="display = $event"></botaoNumero9>
+        <button>/</button>
         <botaoNumero4 :displayLocal="display" @pressionar-botao4="display = $event"></botaoNumero4>
         <botaoNumero5 :displayLocal="display" @pressionar-botao5="display = $event"></botaoNumero5>
         <botaoNumero6 :displayLocal="display" @pressionar-botao6="display = $event"></botaoNumero6>
-        <botaoNumero7></botaoNumero7>
-        <botaoNumero8></botaoNumero8>
-        <botaoNumero9></botaoNumero9>
+        <button>*</button>
+        <botaoNumero1 :displayLocal="display" @pressionar-botao1="display = $event"></botaoNumero1>
+        <botaoNumero2 :displayLocal="display" @pressionar-botao2="display = $event"></botaoNumero2>
+        <botaoNumero3 :displayLocal="display" @pressionar-botao3="display = $event"></botaoNumero3>
+        <button>-</button>
+        
     </div>
 </template>
 

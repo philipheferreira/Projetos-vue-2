@@ -1,12 +1,12 @@
 <template>
-    <button @click="pressionarBotao66666">6</button>
+    <button @click="pressionarBotao6">6</button>
 </template>
 
 <script>
 export default {
     name: 'botaoSeisComponent',
     props: {
-
+        displayLocal: String
     },
     methods: {
         pressionarBotao6(){
