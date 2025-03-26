@@ -1,10 +1,20 @@
 <template>
-    <button>-</button>
+    <button @click="pressionarBotaoSubtracao">-</button>
 </template>
 
 <script>
 export default {
-    name: 'botaoSubtracaoComponent'
+    name: 'botaoSubtracaoComponent',
+    props: {
+        displayLocal: String
+    },
+    methods: {
+        pressionarBotaoSubtracao(){
+            let novoValor = this.displayLocal
+            novoValor += '-'
+            this.$emit('pressionar-botao-subtracao', novoValor)
+        }
+    }
 }
 </script>
 

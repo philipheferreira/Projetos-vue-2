@@ -1,10 +1,20 @@
 <template>
-    <button>*</button>
+    <button @click="pressionarBotaoMultiplicacao">*</button>
 </template>
 
 <script>
 export default {
-    name: 'botaoMultiplicacaoComponent'
+    name: 'botaoMultiplicacaoComponent',
+    props: {
+        displayLocal: String
+    },
+    methods: {
+        pressionarBotaoMultiplicacao(){
+            let novoValor = this.displayLocal
+            novoValor += '*'
+            this.$emit('pressionar-botao-multiplicacao', novoValor)
+        }
+    }
 }
 </script>
 

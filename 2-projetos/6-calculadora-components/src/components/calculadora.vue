@@ -18,13 +18,13 @@
                 <botaoNumero4 :displayLocal="display" @pressionar-botao4="display = $event"></botaoNumero4>
                 <botaoNumero5 :displayLocal="display" @pressionar-botao5="display = $event"></botaoNumero5>
                 <botaoNumero6 :displayLocal="display" @pressionar-botao6="display = $event"></botaoNumero6>
-                <botaoMult></botaoMult>
+                <botaoMult :display-local="display" @pressionar-botao-multiplicacao="display = $event"></botaoMult>
                 <botaoNumero1 :displayLocal="display" @pressionar-botao1="display = $event"></botaoNumero1>
                 <botaoNumero2 :displayLocal="display" @pressionar-botao2="display = $event"></botaoNumero2>
                 <botaoNumero3 :displayLocal="display" @pressionar-botao3="display = $event"></botaoNumero3>
-                <botaoSub></botaoSub>
+                <botaoSub :displayLocal="display" @pressionar-botao-subtracao="display = $event"></botaoSub>
                 <button>.</button>
-                <botaoSoma>+</botaoSoma>
+                <botaoSoma :displayLocal="display" @pressionar-botao-soma="display = $event"></botaoSoma>
                 <botao-limpar :displayLocal="display" @metodo-limpar-display="display = $event"></botao-limpar>
                 <botaoCalcular :displayLocal="display" @calcular="display = $event">=</botaoCalcular>
             </div>
