@@ -23,6 +23,7 @@
                 <botaoNumero2 :displayLocal="display" @pressionar-botao2="display = $event"></botaoNumero2>
                 <botaoNumero3 :displayLocal="display" @pressionar-botao3="display = $event"></botaoNumero3>
                 <botaoSub :displayLocal="display" @pressionar-botao-subtracao="display = $event"></botaoSub>
+                <button>0</button>
                 <button>.</button>
                 <botaoSoma :displayLocal="display" @pressionar-botao-soma="display = $event"></botaoSoma>
                 <botao-limpar :displayLocal="display" @metodo-limpar-display="display = $event"></botao-limpar>
