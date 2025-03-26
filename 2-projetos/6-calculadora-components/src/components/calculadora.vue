@@ -23,7 +23,7 @@
                 <botaoNumero2 :displayLocal="display" @pressionar-botao2="display = $event"></botaoNumero2>
                 <botaoNumero3 :displayLocal="display" @pressionar-botao3="display = $event"></botaoNumero3>
                 <botaoSub :displayLocal="display" @pressionar-botao-subtracao="display = $event"></botaoSub>
-                <button>0</button>
+                <botaoNumero0 :displayLocal="display" @pressionar-botao0="display = $event"></botaoNumero0>
                 <button>.</button>
                 <botaoSoma :displayLocal="display" @pressionar-botao-soma="display = $event"></botaoSoma>
                 <botao-limpar :displayLocal="display" @metodo-limpar-display="display = $event"></botao-limpar>
@@ -40,6 +40,7 @@ import botaoSoma from './botoesOperacoes/botaoSoma.vue'
 import botaoSub from './botoesOperacoes/botaoSubtracao.vue'
 import botaoMult from './botoesOperacoes/botaoMultiplicacao.vue'
 import botaoDiv from './botoesOperacoes/botaoDivisao.vue'
+import botaoNumero0 from './botoesNumeros/botao0.vue'
 import botaoNumero1 from './botoesNumeros/botao1.vue'
 import botaoNumero2 from './botoesNumeros/botao2.vue'
 import botaoNumero3 from './botoesNumeros/botao3.vue'
@@ -65,6 +66,7 @@ import botaoNumero9 from './botoesNumeros/botao9.vue'
             botaoSub,
             botaoMult,
             botaoDiv,
+            botaoNumero0,
             botaoNumero1,
             botaoNumero2,
             botaoNumero3,

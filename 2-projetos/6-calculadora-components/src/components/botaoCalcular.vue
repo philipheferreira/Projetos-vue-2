@@ -13,8 +13,10 @@
       methods: {
         calcular(){
             try {
-                let novoValor = this.DisplayLocal
-                this.$emit('calcular', eval(novoValor))
+                let novoValor = this.displayLocal
+                let aux = eval(novoValor)
+                novoValor = aux
+                this.$emit('calcular', novoValor)
             } catch (e) {
                 let novoValor = 'erro'
                 this.$emit('calcular', novoValor)
