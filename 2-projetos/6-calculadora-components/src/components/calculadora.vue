@@ -24,7 +24,7 @@
                 <botaoNumero3 :displayLocal="display" @pressionar-botao3="display = $event"></botaoNumero3>
                 <botaoSub :displayLocal="display" @pressionar-botao-subtracao="display = $event"></botaoSub>
                 <botaoNumero0 :displayLocal="display" @pressionar-botao0="display = $event"></botaoNumero0>
-                <button>.</button>
+                <botaoPonto :displayLocal="display" @pressionar-botao-ponto="display = $event"></botaoPonto>
                 <botaoSoma :displayLocal="display" @pressionar-botao-soma="display = $event"></botaoSoma>
                 <botao-limpar :displayLocal="display" @metodo-limpar-display="display = $event"></botao-limpar>
                 <botaoCalcular :displayLocal="display" @calcular="display = $event">=</botaoCalcular>
@@ -35,6 +35,7 @@
 
 <script>
 import botaoLimpar from './botaoLimpar.vue'
+import botaoPonto from './botoesOperacoes/botaoPonto.vue'
 import botaoCalcular from './botaoCalcular.vue'
 import botaoSoma from './botoesOperacoes/botaoSoma.vue'
 import botaoSub from './botoesOperacoes/botaoSubtracao.vue'
@@ -61,6 +62,7 @@ import botaoNumero9 from './botoesNumeros/botao9.vue'
         },
         components: {
             botaoLimpar,
+            botaoPonto,
             botaoCalcular,
             botaoSoma,
             botaoSub,
