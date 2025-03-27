@@ -26,7 +26,10 @@
   }
   </script>
   
-  <style>
-  
-  
-  </style>
+  <style scoped>
+    button{
+          cursor: pointer;
+          width: 71.25px;
+          height: 30px;
+    }
+</style>

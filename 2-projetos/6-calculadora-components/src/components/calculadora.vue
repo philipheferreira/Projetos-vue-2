@@ -104,9 +104,4 @@ import botaoNumero9 from './botoesNumeros/botao9.vue'
             grid-template-columns: repeat(4, 1fr);
             gap: 5px;
         }
-        botao {
-            font-size: 1.2em;
-            width: 15px;
-            cursor: pointer;
-        }
 </style>
