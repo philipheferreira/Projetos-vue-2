@@ -106,7 +106,7 @@ import botaoNumero9 from './botoesNumeros/botao9.vue'
         }
         botao {
             font-size: 1.2em;
-            padding: 15px;
+            width: 15px;
             cursor: pointer;
         }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <q-page>
-        <button @click="pressionarBotao1">1</button>
+        <button @click="pressionarBotao1" >1</button>
     </q-page>
 </template>
 
@@ -20,8 +20,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
-
+button {
+        width: 71.25px;
+        cursor: pointer;
+    }
 
 </style>
