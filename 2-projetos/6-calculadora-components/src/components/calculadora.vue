@@ -34,9 +34,9 @@
 </template>
 
 <script>
-import botaoLimpar from './botaoLimpar.vue'
+import botaoLimpar from './botoesOperacoes/botaoLimpar.vue'
 import botaoPonto from './botoesOperacoes/botaoPonto.vue'
-import botaoCalcular from './botaoCalcular.vue'
+import botaoCalcular from './botoesOperacoes/botaoCalcular.vue'
 import botaoSoma from './botoesOperacoes/botaoSoma.vue'
 import botaoSub from './botoesOperacoes/botaoSubtracao.vue'
 import botaoMult from './botoesOperacoes/botaoMultiplicacao.vue'
