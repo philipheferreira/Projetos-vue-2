@@ -4,23 +4,23 @@
         <div class="calculadora">
         <input type="text" v-model="display" disabled/>
             <div class="botoes">
-                <botaoNumero7 :displayLocal="display" @pressionar-botao7="display = $event"></botaoNumero7>
-                <botaoNumero8 :displayLocal="display" @pressionar-botao8="display = $event"></botaoNumero8>
-                <botaoNumero9 :displayLocal="display" @pressionar-botao9="display = $event"></botaoNumero9>
-                <botaoDiv :displayLocal="display" @pressionar-botao-divisao="display = $event"></botaoDiv>
-                <botaoNumero4 :displayLocal="display" @pressionar-botao4="display = $event"></botaoNumero4>
-                <botaoNumero5 :displayLocal="display" @pressionar-botao5="display = $event"></botaoNumero5>
-                <botaoNumero6 :displayLocal="display" @pressionar-botao6="display = $event"></botaoNumero6>
-                <botaoMult :display-local="display" @pressionar-botao-multiplicacao="display = $event"></botaoMult>
-                <botaoNumero1 :displayLocal="display" @pressionar-botao1="display = $event"></botaoNumero1>
-                <botaoNumero2 :displayLocal="display" @pressionar-botao2="display = $event"></botaoNumero2>
-                <botaoNumero3 :displayLocal="display" @pressionar-botao3="display = $event"></botaoNumero3>
-                <botaoSub :displayLocal="display" @pressionar-botao-subtracao="display = $event"></botaoSub>
-                <botaoNumero0 :displayLocal="display" @pressionar-botao0="display = $event"></botaoNumero0>
-                <botaoPonto :displayLocal="display" @pressionar-botao-ponto="display = $event"></botaoPonto>
-                <botaoSoma :displayLocal="display" @pressionar-botao-soma="display = $event"></botaoSoma>
-                <botao-limpar :displayLocal="display" @metodo-limpar-display="display = $event"></botao-limpar>
-                <botaoCalcular :displayLocal="display" @calcular="display = $event">=</botaoCalcular>
+                <botaoNumero7 :displayLocal="display" @pressionar-botao7="display = $event"/>
+                <botaoNumero8 :displayLocal="display" @pressionar-botao8="display = $event"/>
+                <botaoNumero9 :displayLocal="display" @pressionar-botao9="display = $event"/>
+                <botaoDiv :displayLocal="display" @pressionar-botao-divisao="display = $event"/>
+                <botaoNumero4 :displayLocal="display" @pressionar-botao4="display = $event"/>
+                <botaoNumero5 :displayLocal="display" @pressionar-botao5="display = $event"/>
+                <botaoNumero6 :displayLocal="display" @pressionar-botao6="display = $event"/>
+                <botaoMult :display-local="display" @pressionar-botao-multiplicacao="display = $event"/>
+                <botaoNumero1 :displayLocal="display" @pressionar-botao1="display = $event"/>
+                <botaoNumero2 :displayLocal="display" @pressionar-botao2="display = $event"/>
+                <botaoNumero3 :displayLocal="display" @pressionar-botao3="display = $event"/>
+                <botaoSub :displayLocal="display" @pressionar-botao-subtracao="display = $event"/>
+                <botaoNumero0 :displayLocal="display" @pressionar-botao0="display = $event"/>
+                <botaoPonto :displayLocal="display" @pressionar-botao-ponto="display = $event"/>
+                <botaoSoma :displayLocal="display" @pressionar-botao-soma="display = $event"/>
+                <botao-limpar :displayLocal="display" @metodo-limpar-display="display = $event"/>
+                <botaoCalcular :displayLocal="display" @calcular="display = $event"/>
             </div>
         </div>
     </div>
@@ -49,8 +49,7 @@ import botaoNumero9 from './botoesNumeros/botao9.vue'
         name: 'calculadoraComponent',
         data () {
             return {
-                display: '',
-                botoes: ['7', '8', '9', '/', '4', '5', '6', '*', '1', '2', '3', '-', '0', '.', '+']
+                display: ''
             }
         },
         components: {
@@ -71,20 +70,7 @@ import botaoNumero9 from './botoesNumeros/botao9.vue'
             botaoNumero7,
             botaoNumero8,
             botaoNumero9
-        },
-        methods: {
-            calcular(){
-                try {
-                    this.display = eval(this.display)
-                } catch (e) {
-                    this.display = 'erro'
-                }
-            },
-            pressionar(valor){
-                this.display += valor
-            }
         }
-
     }
 </script>
 
