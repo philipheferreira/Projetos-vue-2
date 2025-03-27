@@ -1,12 +1,5 @@
 <template>
     <div>
-        <div class="calculadora">
-            <input type="text" v-model="display" disabled/>
-            <div class="botoes">
-                <button v-for="botao in botoes" :key="botao" @click="pressionar(botao)"> {{ botao }} </button>
-                <button @click="calcular">=</button>
-            </div>
-        </div>
         <br>
         <div class="calculadora">
         <input type="text" v-model="display" disabled/>
