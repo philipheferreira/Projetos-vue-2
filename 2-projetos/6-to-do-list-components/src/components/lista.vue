@@ -1,6 +1,7 @@
 <template>
     <div class="container">
         <h2>To-Do List</h2>
+        <componente-tela  :novaTarefaLocal="novaTarefa"></componente-tela>
         <input class="receberTarefa" v-model="novaTarefa" @keyup.enter="adicionarTarefas" placeholder="Nova tarefa"/>
         <button class="botaoMetodoAdicionarTarefas" @click="adicionarTarefas">Adicionar tarefas</button>
         <ul>
@@ -12,8 +13,10 @@
     </div>
 </template>
 <script>
+import ComponenteTela from './componentesLista/tela.vue'
     export default{
         name: 'listaComponent',
+        components: {ComponenteTela},
         data() {
             return{
                 tarefas: ['Comprar Arroz', 'Estudar um pouco de vue', 'Correr 30 minutos'],
