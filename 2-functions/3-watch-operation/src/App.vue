@@ -1,13 +1,14 @@
 <template>
   <div id="app">
+    <operation-watch></operation-watch>
   </div>
 </template>
 
 <script>
-
+import operationWatch from './components/operationWatch.vue';
 export default {
   name: 'App',
-  components: {}
+  components: {operationWatch}
 }
 </script>
 
