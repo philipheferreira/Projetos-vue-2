@@ -13,7 +13,7 @@
     </div>
 </template>
 <script>
-import ComponenteTela from './componentesLista/tela.vue'
+import ComponenteTela from './componentesLista/telaComponet.vue'
     export default{
         name: 'listaComponent',
         components: {ComponenteTela},
