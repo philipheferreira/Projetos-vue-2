@@ -1,42 +1,30 @@
 <template>
     <div class="container">
         <h2>To-Do List</h2>
-        <componente-tela  :novaTarefaLocal="novaTarefa"></componente-tela>
-        <input class="receberTarefa" v-model="novaTarefa" @keyup.enter="adicionarTarefas" placeholder="Nova tarefa"/>
-        <button class="botaoMetodoAdicionarTarefas" @click="adicionarTarefas">Adicionar tarefas</button>
-        <ul>
-            <li v-for="(tarefa, index) in tarefas" :key="tarefa.id">
-                {{ index + 1 }} - {{ tarefa }}
-                <button @click="removerTarefa(index)">X</button>
-            </li>
-        </ul>
+        <componente-tela @adicionar-tarefas="adicionarTarefas"></componente-tela>
+        <lista-component :listaTarefasLocal="tarefas" @remover-tarefa="removerTarefa"></lista-component>
     </div>
 </template>
 <script>
-import ComponenteTela from './componentesLista/telaComponet.vue'
-    export default{
-        name: 'listaComponent',
-        components: {ComponenteTela},
+import ComponenteTela from './componentesLista/telaComponent.vue'
+import ListaComponent from './componentesLista/listaComponent.vue'
+    export default {
+        name: 'ListaTarefas',
+        components: {ComponenteTela, ListaComponent},
         data() {
             return{
-                tarefas: ['Comprar Arroz', 'Estudar um pouco de vue', 'Correr 30 minutos'],
-                novaTarefa: ''
+                tarefas: ['Comprar Arroz', 'Estudar um pouco de vue', 'Correr 30 minutos']
             }
         },
         methods:{
-            adicionarTarefas(){
-                if(this.novaTarefa.trim() !== ''){
-                    this.tarefas.push(this.novaTarefa)
-                    this.novaTarefa = ''
-                }else if(this.novaTarefa.trim() == ''){
-                    alert('Por favor digite uma tarefa para ser adicionada')
-                }
+            adicionarTarefas(novaTarefa){
+                this.tarefas.push(novaTarefa);
             },
-            removerTarefa(index){
-                this.tarefas.splice(index, 1)
+            removerTarefa(index) {
+                this.tarefas.splice(index, 1);
             }
         }
-    }
+    };
 </script>
 
 <style scoped>
