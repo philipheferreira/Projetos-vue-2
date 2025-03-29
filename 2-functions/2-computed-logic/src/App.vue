@@ -1,11 +1,12 @@
 <template>
+  <operation-computed></operation-computed>
 </template>
 
 <script>
-
+import operationComputed from './components/operationComputed.vue';
 export default {
   name: 'App',
-  components: {}
+  components: {operationComputed}
 }
 </script>
 
