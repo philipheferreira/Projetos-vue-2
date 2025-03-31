@@ -35,3 +35,12 @@ Se nomeCompleto for chamado várias vezes sem mudanças nas dependências, ele n
     }
   }
   </script>
+
+  <!--
+
+  Quando usar computed? 
+  ✅ Quando precisar de um valor derivado de outros dados.
+  ✅ Quando precisar evitar cálculos desnecessários para performance.
+  ✅ Quando quiser atualizar dados dinamicamente baseado no estado.
+
+  -->

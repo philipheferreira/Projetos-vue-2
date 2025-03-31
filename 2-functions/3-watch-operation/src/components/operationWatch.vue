@@ -45,3 +45,13 @@ Como funciona?
 ✅ Para executar lógica específica ao detectar mudanças de estado.
 
 -->
+
+<!--
+
+Resumo:
+
+computed → Usado para valores derivados, com cache.
+
+watch → Usado para executar lógica personalizada quando um valor muda.
+
+-->
