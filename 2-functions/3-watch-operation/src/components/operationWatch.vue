@@ -29,3 +29,19 @@
     }
   }
   </script>
+    
+<!-- 
+Como funciona?
+* Quando contador for alterado, o watch detecta a mudança e executa a função associada.
+* Ele recebe dois parâmetros: o novo valor e o valor antigo.
+  
+  -->
+
+<!--
+
+ Quando usar watch?
+✅ Para realizar operações assíncronas (como requisições API) quando um valor mudar.
+✅ Para monitorar mudanças profundas em objetos e arrays.
+✅ Para executar lógica específica ao detectar mudanças de estado.
+
+-->
