@@ -1,13 +1,14 @@
 <template>
   <div id="app">
+    <operation-created></operation-created>
   </div>
 </template>
 
 <script>
-
+import operationCreated from './components/operationCreated.vue';
 export default {
   name: 'App',
-  components: {}
+  components: {operationCreated}
 }
 </script>
 
