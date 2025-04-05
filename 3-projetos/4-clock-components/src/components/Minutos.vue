@@ -20,7 +20,7 @@
         methods: {
             atualizarMinutos(){
                 let agora = new Date()
-                this.minuto = agora.getMinuts()
+                this.minuto = agora.getMinutes()
             }
         }
 

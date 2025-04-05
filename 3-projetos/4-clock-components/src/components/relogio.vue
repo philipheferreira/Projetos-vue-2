@@ -1,15 +1,17 @@
 <template>
     <div>
-        {{ hora }} : <minutos-component/> : <segundos-component/>
+        <horas-component/> : <minutos-component/> : <segundos-component/>
     </div>
 </template>
 
 <script>
+import horasComponent from './Horas.vue'
 import minutosComponent from './Minutos.vue'
 import segundosComponent from './Segundos.vue'
     export default{
         name: 'relogioComponent',
         components: {
+            horasComponent,
             minutosComponent,
             segundosComponent
         },
