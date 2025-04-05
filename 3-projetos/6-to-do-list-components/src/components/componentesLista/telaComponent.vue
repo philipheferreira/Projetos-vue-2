@@ -2,7 +2,8 @@
 
 <template>
     <div>
-        <input v-model="novaTarefa" placeholder="Nova Tarefa" @keyup.enter="adicionarTarefas"/>
+        <input v-model="novaTarefa" placeholder="Nova Tarefa" @keyup.enter="adicionarTarefasLocal"/> <!--O v-model linka o valor dentro do input com a variavel local 
+        novaTarefa, e o keyup.enter aciona o metodo adicionarTarefasLocal-->
     </div>
 </template>
 
@@ -11,13 +12,13 @@ export default {
     name: 'ComponenteTela',
     data() {
         return {
-            novaTarefa: ''
+            novaTarefa: '' // variavel dentro do componente que recebe o valor digitado no input
         };
     },
     methods: {
-        adicionarTarefas() {
+        adicionarTarefasLocal() {
             if (this.novaTarefa.trim() !== '') {
-                this.$emit('adicionar-tarefas', this.novaTarefa);
+                this.$emit('adicionar-tarefas-local', this.novaTarefa); // conecta o metodo local e repassa a variavel para o metodo no componente pai
                 this.novaTarefa = '';
             } else {
                 alert('Por favor, digite uma tarefa para ser adicionada');

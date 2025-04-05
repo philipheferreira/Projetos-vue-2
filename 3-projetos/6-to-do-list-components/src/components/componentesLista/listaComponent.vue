@@ -3,7 +3,7 @@
         <ul>
             <li v-for="(tarefaLocal, index) in listaTarefasLocal" :key="index">
                 {{ tarefaLocal }}
-                <button @click="removerTarefa(index)">X</button>
+                <button @click="removerTarefaLocal(index)">X</button>
             </li>
         </ul>
     </div>
@@ -15,8 +15,8 @@
         name: 'listaComponent',
         props: ['listaTarefasLocal'],
         methods: {
-            removerTarefa(index){
-                this.$emit('remover-Tarefas', index);
+            removerTarefaLocal(index){
+                this.$emit('remover-tarefa-local', index);
             }
         }
     }

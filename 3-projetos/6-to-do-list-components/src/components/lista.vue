@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <h2>To-Do List</h2>
-        <componente-tela @adicionar-tarefas="adicionarTarefas"></componente-tela>
-        <lista-component :listaTarefasLocal="tarefas" @remover-tarefa="removerTarefa"></lista-component>
+        <componente-tela @adicionar-tarefas-local="adicionarTarefas"></componente-tela> <!-- Link o valor da nova tarefa local repassando o valor da variavel para o metodo no componente pai -->
+        <lista-component :listaTarefasLocal="tarefas" @remover-tarefa-local="removerTarefa"></lista-component>
     </div>
 </template>
 <script>
@@ -17,8 +17,8 @@ import ListaComponent from './componentesLista/listaComponent.vue'
             }
         },
         methods:{
-            adicionarTarefas(novaTarefa){
-                this.tarefas.push(novaTarefa);
+            adicionarTarefas(novaTarefa){ // O metodo recebe a variavel novaTarefa que vem do componente filho
+                this.tarefas.push(novaTarefa); // adiciona o componente filho para dentro da lista local tarefas
             },
             removerTarefa(index) {
                 this.tarefas.splice(index, 1);
