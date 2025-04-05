@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="relogio">
         <horas-component/> : <minutos-component/> : <segundos-component/>
     </div>
 </template>
@@ -38,6 +38,9 @@ import segundosComponent from './Segundos.vue'
 
 </script>
 
-<style>
-
+<style scoped>
+    .relogio{
+        display: flex;
+        justify-content: center;
+    }
 </style>
