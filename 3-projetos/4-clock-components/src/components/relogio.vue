@@ -15,17 +15,6 @@ import segundosComponent from './Segundos.vue'
             minutosComponent,
             segundosComponent
         },
-        mounted() {
-            this.atualizarRelogio() // Atualiza imediatamente ao montar o componente
-                setInterval(this.atualizarRelogio, 1000) // Atualiza a cada segundo
-        },
-        data () {
-            return{
-                hora: '',
-                minuto: '',
-                segundo: ''
-            }
-        },
         methods: { 
             atualizarRelogio() {
                 let agora = new Date()
