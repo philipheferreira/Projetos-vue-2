@@ -1,19 +1,15 @@
 <template>
-
     <div>
-
-
-        
+        horas
     </div>
-
 </template>
 
 <script>
     export default{ 
-        name: '',
+        name: 'componentHora',
         data () {
             return {
-                
+
             }
         }
     }

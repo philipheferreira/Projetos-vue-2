@@ -1,15 +1,12 @@
 <template>
-
     <div>
-
-        
+        minutos
     </div>
-
 </template>
 
 <script>
 export default{
-    name: '',
+    name: 'componentMinuto',
     data () {
         return{
 

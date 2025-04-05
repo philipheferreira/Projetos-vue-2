@@ -1,19 +1,15 @@
 <template>
-
     <div>
-
-
-        
+        seguundoss
     </div>
-
 </template>
 
 <script>
     export default {
-        name: '',
+        name: 'ComponentSegundo',
         data () {
             return{
-                
+
             }
         }
     }
