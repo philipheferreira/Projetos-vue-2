@@ -1,14 +1,18 @@
 <template>
     <div>
-        {{ hora }} : {{ minuto }} : <segundos-component />
+        {{ hora }} : <minutos-component/> : <segundos-component/>
     </div>
 </template>
 
 <script>
+import minutosComponent from './Minutos.vue'
 import segundosComponent from './Segundos.vue'
     export default{
         name: 'relogioComponent',
-        components: {segundosComponent},
+        components: {
+            minutosComponent,
+            segundosComponent
+        },
         mounted() {
             this.atualizarRelogio() // Atualiza imediatamente ao montar o componente
                 setInterval(this.atualizarRelogio, 1000) // Atualiza a cada segundo
