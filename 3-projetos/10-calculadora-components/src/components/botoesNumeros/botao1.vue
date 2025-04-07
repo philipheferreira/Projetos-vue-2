@@ -1,6 +1,6 @@
 <template>
     <q-page>
-        <button @click="pressionarBotao1" @keyup.1="pressionarBotao1" >1</button>
+        <button @click="pressionarBotao1" >1</button>
     </q-page>
 </template>
 
