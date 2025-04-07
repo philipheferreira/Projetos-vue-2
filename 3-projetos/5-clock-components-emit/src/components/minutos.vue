@@ -1,6 +1,6 @@
 <template>
     <div>
-        {{ minuto }}
+        {{ minutoLocal }}
     </div>
 </template>
 
@@ -8,18 +8,21 @@
 export default{
     name: 'componentMinuto',
     mounted () {
-        this.atualizarMinutos()
-        setInterval(this.atualizarMinutos, 1000)
+        setInterval(() => {
+            this.atualizarMinutosLocal()
+            this.$emit('atualizar-minutos-local', this.minutoLocal)
+        }, 1000)
     },
+
     data () {
         return{
-            minuto: null
+            minutoLocal: null
         }
     },
     methods: {
-        atualizarMinutos(){
+        atualizarMinutosLocal(){
             let agora = new Date()
-            this.minuto = agora.getMinutes()
+            this.minutoLocal = agora.getMinutes()
         }
     }
 }

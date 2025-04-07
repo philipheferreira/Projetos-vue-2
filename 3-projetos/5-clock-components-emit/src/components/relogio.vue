@@ -1,7 +1,7 @@
 <template>
     <div>
         <componentHora @atualizar-horas-local="atualizarHora
-        "  /> : <componentMinuto /> : <componentSegundo @atualizar-segundos-local="atualizarSegundo"/>
+        "  /> : <componentMinuto @atualizar-minutos-local="atualizarMinutos" /> : <componentSegundo @atualizar-segundos-local="atualizarSegundo"/>
     </div>
 </template>
 
@@ -20,6 +20,9 @@ import componentSegundo from './segundos.vue'
         methods: {
             atualizarHora(valor){
                 this.hora = valor
+            },
+            atualizarMinutos(valor){
+                this.minuto = valor
             },
             atualizarSegundo(valor) {
                 this.segundo = valor
