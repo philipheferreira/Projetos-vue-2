@@ -1,7 +1,6 @@
 <template>
     <div>
-        <componentHora  @atualizar-horas-local="atualizarHora
-        "  /> 
+        <componentHora  @atualizar-horas-local="atualizarHora" /> 
         <componentMinuto @atualizar-minutos-local="atualizarMinutos" />
          <componentSegundo @atualizar-segundos-local="atualizarSegundo"/>
     

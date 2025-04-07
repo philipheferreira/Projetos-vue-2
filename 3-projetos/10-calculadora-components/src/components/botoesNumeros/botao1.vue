@@ -22,9 +22,9 @@ export default {
 
 <style scoped>
 
-button {
-        width: 71.25px;
-        cursor: pointer;
+    button {
+            width: 71.25px;
+            cursor: pointer;
     }
 
 </style>

@@ -21,5 +21,5 @@ export default {
 <style scoped>
     button{
             cursor: pointer;
-        }
+    }
 </style>
