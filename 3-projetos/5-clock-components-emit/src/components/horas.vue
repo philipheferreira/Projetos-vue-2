@@ -1,7 +1,5 @@
 <template>
-    <div>
-        {{ horaLocal }}
-    </div>
+    <div></div>
 </template>
 
 <script>

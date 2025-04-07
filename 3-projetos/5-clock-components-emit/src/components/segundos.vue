@@ -1,7 +1,5 @@
 <template>
-    <div>
-        {{ segundoLocal }}
-    </div>
+    <div></div>
 </template>
 
 <script>
