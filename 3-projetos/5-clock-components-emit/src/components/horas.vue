@@ -1,15 +1,28 @@
 <template>
     <div>
-        horas
+        {{ hora }}
     </div>
 </template>
 
 <script>
     export default{ 
         name: 'componentHora',
+        mounted () {
+            setInterval(() => {
+                this.atualizarHorasLocal()
+                this.$emit('atualizar-horas-local', this.hora)
+            }, 1000)
+        },
+
         data () {
             return {
-
+                hora: null
+            }
+        },
+        methods: {
+            atualizarHorasLocal(){
+                let agora = new Date()
+                this.hora = agora.getHours()
             }
         }
     }
