@@ -4,6 +4,7 @@
     <div>
         <input v-model="novaTarefa" placeholder="Nova Tarefa" @keyup.enter="adicionarTarefasLocal"/> <!--O v-model linka o valor dentro do input com a variavel local 
         novaTarefa, e o keyup.enter aciona o metodo adicionarTarefasLocal-->
+        <button @click="adicionarTarefasLocal">Adicionar</button>
     </div>
 </template>
 
