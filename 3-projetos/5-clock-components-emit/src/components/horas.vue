@@ -8,8 +8,8 @@
     export default{ 
         name: 'componentHora',
         mounted () {
+            this.atualizarHorasLocal()
             setInterval(() => {
-                this.atualizarHorasLocal()
                 this.$emit('atualizar-horas-local', this.hora)
             }, 1000)
         },

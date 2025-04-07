@@ -14,14 +14,6 @@ import segundosComponent from './Segundos.vue'
             horasComponent,
             minutosComponent,
             segundosComponent
-        },
-        methods: { 
-            atualizarRelogio() {
-                let agora = new Date()
-                this.hora = agora.getHours()
-                this.minuto = agora.getMinutes()
-                this.segundo = agora.getSeconds()
-            }
         }
     }
 

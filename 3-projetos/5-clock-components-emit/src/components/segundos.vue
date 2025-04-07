@@ -1,6 +1,6 @@
 <template>
     <div>
-        {{ segundo }}
+        {{ segundoLocal }}
     </div>
 </template>
 
@@ -8,18 +8,20 @@
     export default {
         name: 'ComponentSegundo',
         mounted () {
-            this.atualizarSegundos()
-            setInterval(this.atualizarSegundos, 1000)
+            setInterval(() => {
+                this.atualizarSegundosLocal()
+                this.$emit('atualizar-segundos-local', this.segundoLocal)
+            }, 1000)
         },
         data () {
             return{
-                segundo: null
+                segundoLocal: null
             }
         },
         methods: {
-            atualizarSegundos(){
+            atualizarSegundosLocal(){
                 let agora = new Date()
-                this.segundo = agora.getSeconds()
+                this.segundoLocal = agora.getSeconds()
             }
         }
     }
