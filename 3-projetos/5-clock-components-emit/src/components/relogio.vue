@@ -1,7 +1,9 @@
 <!-- Nesse codigo em vez de eu fazer uma conexão direta usando o Props e bind eu optei por usar uma conexão usando
  metodos e chamadas pelo emit. Eu recebo os valores do emit utilizando a recepção de methodos pelo component 
  Linkando um metodo do pai com um metodo do filho, e recebendo os valores dos metodos e repassando para
- variaveis locais no component pai -->
+ variaveis locais no component pai
+ 
+ variavel do component filho recebe valor = valor é repassado pelo emit atraves do metodo filho para o metodo pai = metodo pai repassa valor para variavel pai-->
 
 <template>
     <div>
