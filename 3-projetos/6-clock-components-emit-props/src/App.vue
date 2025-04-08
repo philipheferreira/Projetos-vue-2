@@ -1,13 +1,14 @@
 <template>
   <div id="app">
+    <relogio-component />
   </div>
 </template>
 
 <script>
-
+import relogioComponent from './components/relogio.vue'
 export default {
   name: 'App',
-  components: {}
+  components: {relogioComponent}
 }
 </script>
 
