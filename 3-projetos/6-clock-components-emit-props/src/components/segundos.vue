@@ -8,12 +8,7 @@
 <script>
 export default {
     name: 'segundosComponent',
-    mounted (){
-        setInterval(() => {
-            this.atualizarSegundosLocal()
-            this.$$emit('atualizar-segundos-local', this.novoValor)
-        }, 1000)
-    },
+    mounted (){},
     props: {
         segundoLocal
     },
@@ -22,6 +17,7 @@ export default {
             let agora = new Date()
             let novoValor = this.segundoLocal
             novoValor = agora.getSeconds()
+            this.$emit('atualizar-segundos-local', this.novoValor)
         }
     }
 }
