@@ -11,6 +11,7 @@ export default {
     mounted (){
         setInterval(() => {
             this.atualizarSegundosLocal()
+            this.$$emit('atualizar-segundos-local', this.novoValor)
         }, 1000)
     },
     props: {
@@ -19,7 +20,8 @@ export default {
     methods: {
         atualizarSegundosLocal() {
             let agora = new Date()
-            this.segundoLocal = agora.getSeconds()
+            let novoValor = this.segundoLocal
+            novoValor = agora.getSeconds()
         }
     }
 }

@@ -2,7 +2,7 @@
     <div>
         <component-hora />
         <component-minuto />
-        <component-segundo :segundoLocal="segundoRelogio" />
+        <component-segundo :segundoLocal="segundoRelogio" @atualizar-segundos-local="segundoRelogio = $event" />
     </div>
 </template>
 
