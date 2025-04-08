@@ -1,12 +1,24 @@
 <template>
-    <div>
-        minuto
-    </div>
+    <div></div>
 </template>
 
 <script>
 export default {
-    name: 'minutosComponent'
+    name: 'minutosComponent',
+    mounted (){
+        this.atualizarMinutosLocal()
+        setInterval(this.atualizarMinutosLocal, 1000)
+    },
+    props: {
+        minutoLocal: Number
+    },
+    methods: {
+        atualizarMinutosLocal() {
+            let agora = new Date()
+            let novoValor = agora.getMinutes()
+            this.$emit('atualizar-minutos-local', novoValor)
+        }
+    }
 
 }
 </script>

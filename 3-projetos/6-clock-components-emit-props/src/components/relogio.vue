@@ -1,8 +1,10 @@
 <template>
     <div>
         <component-hora />
-        <component-minuto />
+        <component-minuto :minutoLocal="minutoRelogio" @atualizar-minutos-local="minutoRelogio = $event" />
         <component-segundo :segundoLocal="segundoRelogio" @atualizar-segundos-local="segundoRelogio = $event" />
+
+        {{ minutoRelogio }} : {{ segundoRelogio }}
     </div>
 </template>
 
