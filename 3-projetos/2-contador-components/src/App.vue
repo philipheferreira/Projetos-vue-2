@@ -2,8 +2,8 @@
   <div id="app">
     <h2>Contador: {{ contador }}</h2>
     <div class="botoes">
-      <botaoSoma :contadorLocal="contador" @adicionar-contador= "contador = $event" ></botaoSoma> <!-- Organização contadorLocal para contador porque está utilizando uma props pra realizar a comunicação -->
-      <botaoSub :contadorLocal="contador" @subtrair-contador= "contador = $event"></botaoSub> <!-- Organização contadorLocal para contador porque está utilizando uma props pra realizar a comunicação -->
+      <botaoSoma :contadorLocal="contador" @comando-adicionar-contador= "contador = $event" ></botaoSoma> <!-- Organização contadorLocal para contador porque está utilizando uma props pra realizar a comunicação -->
+      <botaoSub :contadorLocal="contador" @comando-subtrair-contador= "contador = $event"></botaoSub> <!-- Organização contadorLocal para contador porque está utilizando uma props pra realizar a comunicação -->
     </div>
   </div>
 </template>
