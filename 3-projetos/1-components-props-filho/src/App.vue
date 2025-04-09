@@ -1,13 +1,14 @@
 <template>
   <div id="app">
+    <component-pai /> <!-- Chamando o component pai -->
   </div>
 </template>
 
 <script>
-
+import componentPai from './components/componentPai.vue' // importando component
 export default {
   name: 'App',
-  components: {}
+  components: {componentPai} // declarando component no vue
 }
 </script>
 
