@@ -16,7 +16,7 @@ export default {
         atualizarMinutosLocal() {
             let agora = new Date()
             let novoValor = agora.getMinutes()
-            this.$emit('atualizar-minutos-local', novoValor)
+            this.$emit('comando-atualizar-minutos-local', novoValor)
         }
     }
 }

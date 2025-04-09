@@ -5,6 +5,8 @@
  
  variavel do component filho recebe valor => valor é repassado pelo emit atraves do metodo filho para o metodo pai => metodo pai repassa valor para variavel pai-->
 
+<!-- Como o props não é utilizado para atualizar as variaveis linkando elas com os components filhos, esse codigo não está 100% correto, foi mantido apenas a nivel de estudo -->
+
 <template>
     <div>
         <componentHora  @comando-atualizar-horas-local="atualizarHora" /> 

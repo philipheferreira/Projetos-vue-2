@@ -15,8 +15,8 @@ export default {
     methods: {
         atualizarHorasLocal() {
             let agora = new Date()
-            let novoValor = agora.getMinutes()
-            this.$emit('atualizar-horas-local', novoValor)
+            let novoValor = agora.getHours()
+            this.$emit('comando-atualizar-horas-local', novoValor)
         }
     }
 }

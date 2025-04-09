@@ -16,7 +16,7 @@ export default {
         atualizarSegundosLocal() {
             let agora = new Date()
             let novoValor = agora.getSeconds()
-            this.$emit('atualizar-segundos-local', novoValor)
+            this.$emit('comando-atualizar-segundos-local', novoValor)
         }
     }
 }
