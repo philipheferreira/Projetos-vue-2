@@ -3,13 +3,13 @@
  Linkando um metodo do pai com um metodo do filho, e recebendo os valores dos metodos e repassando para
  variaveis locais no component pai
  
- variavel do component filho recebe valor = valor é repassado pelo emit atraves do metodo filho para o metodo pai = metodo pai repassa valor para variavel pai-->
+ variavel do component filho recebe valor => valor é repassado pelo emit atraves do metodo filho para o metodo pai => metodo pai repassa valor para variavel pai-->
 
 <template>
     <div>
-        <componentHora  @atualizar-horas-local="atualizarHora" /> 
-        <componentMinuto @atualizar-minutos-local="atualizarMinutos" />
-         <componentSegundo @atualizar-segundos-local="atualizarSegundo"/>
+        <componentHora  @comando-atualizar-horas-local="atualizarHora" /> 
+        <componentMinuto @comando-atualizar-minutos-local="atualizarMinutos" />
+         <componentSegundo @comando-atualizar-segundos-local="atualizarSegundo"/>
     
     {{ hora }} : {{ minuto }} : {{ segundo }}
     </div>
@@ -35,10 +35,10 @@ import componentSegundo from './segundos.vue'
             }
         },
         methods: {
-            atualizarHora(valor){
+            atualizarHora(valor){ // o metodo atualizarHora no pai recebe o metodo atualizarHorasLocal do filho pelo emit, recebendo o valor repassado no emit
                 this.hora = valor
             },
-            atualizarMinutos(valor){ // recebendo o valor da variavel minutoLocal e repassando para a variavel minuto
+            atualizarMinutos(valor){ // o metodo atualizarMinuto no pai recebe o metodo atualizarHorasLocal do filho pelo emit, recebendo o valor repassado
                 this.minuto = valor
             },
             atualizarSegundo(valor) {

@@ -8,7 +8,7 @@ export default{
     mounted () {
         setInterval(() => {
             this.atualizarMinutosLocal() // ativando o metodo de atualizar minutos
-            this.$emit('atualizar-minutos-local', this.minutoLocal) // repassar para o componente pai o metodo atualizarMinutosLocal e o valor de minutoLocal
+            this.$emit('comando-atualizar-minutos-local', this.minutoLocal) // repassar para o componente pai o metodo atualizarMinutosLocal e o valor de minutoLocal
         }, 1000)
     },
 

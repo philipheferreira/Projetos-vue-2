@@ -8,7 +8,7 @@
         mounted () {
             setInterval(() => {
                 this.atualizarSegundosLocal()
-                this.$emit('atualizar-segundos-local', this.segundoLocal)
+                this.$emit('comando-atualizar-segundos-local', this.segundoLocal)
             }, 1000)
         },
         data () {

@@ -8,7 +8,7 @@
         mounted () {
             setInterval(() => {
                 this.atualizarHorasLocal()
-                this.$emit('atualizar-horas-local', this.horaLocal)
+                this.$emit('comando-atualizar-horas-local', this.horaLocal)
             }, 1000)
         },
 
