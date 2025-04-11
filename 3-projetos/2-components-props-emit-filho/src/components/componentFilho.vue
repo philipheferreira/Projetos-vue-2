@@ -7,7 +7,7 @@
 <script>
 
     export default {
-        name: 'componentFilho'
+        name: 'componentFilho',
         data (){
             return{
 
