@@ -1,13 +1,16 @@
 <template>
   <div id="app">
+    <pai></pai>
   </div>
 </template>
 
 <script>
-
+import pai from './components/componentPai.vue'
 export default {
   name: 'App',
-  components: {}
+  components: {
+    pai
+  }
 }
 </script>
 
