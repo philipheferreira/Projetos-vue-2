@@ -1,18 +1,22 @@
 <template>
-<div>
-    component filho 1
-</div>
+    <div>
+        component filho
+    </div>
 </template>
 
 <script>
 
     export default {
-        name: '',
+        name: 'componentFilho1',
         data () {
-            return {
+            return{
 
             }
         }
     }
 
 </script>
+
+<style scoped>
+
+</style>

@@ -6,14 +6,14 @@
 
 <script>
 
-export default {
-    name: '',
-    data () {
-        return{
+    export default {
+        name: 'componentFilho2',
+        data () {
+            return{
 
+            }
         }
     }
-}
 
 </script>
 
