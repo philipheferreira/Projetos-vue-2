@@ -4,8 +4,15 @@
     </div>
 </template>
 
-<script setup>
+<script>
+    export default {
+        name: 'componentFilho1',
+        data () {
+            return{
 
+            }
+        }
+    }
 </script>
 
 <style scoped>
