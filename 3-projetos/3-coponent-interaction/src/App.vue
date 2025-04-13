@@ -1,13 +1,14 @@
 <template>
   <div id="app">
+    <component-pai />
   </div>
 </template>
 
 <script>
-
+import componentPai from './components/componentPai'
 export default {
   name: 'App',
-  components: {}
+  components: {componentPai}
 }
 </script>
 
