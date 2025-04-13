@@ -1,8 +1,8 @@
 <template>
 <div>
 
-    <filho1 />
-    <filho2 />
+    <filho1 :nomeLocal1="nome" />
+    <filho2 :nomeLocal2="nome" />
 
 </div>
 </template>
@@ -19,7 +19,7 @@ import filho2 from './componentFilho2'
         },
         data () {
             return{
-
+                nome: 'Philiphe Siqueira Ferreira'
             }
         }
     }

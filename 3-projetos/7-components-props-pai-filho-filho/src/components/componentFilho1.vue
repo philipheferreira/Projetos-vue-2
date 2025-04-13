@@ -1,6 +1,6 @@
 <template>
     <div>
-        component filho
+        {{ nomeLocal1 }}
     </div>
 </template>
 
@@ -8,6 +8,12 @@
 
     export default {
         name: 'componentFilho1',
+        props: {
+            nomeLocal1: {
+                type: String,
+                required: true
+            }
+        },
         data () {
             return{
 
