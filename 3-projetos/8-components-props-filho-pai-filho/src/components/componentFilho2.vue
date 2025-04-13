@@ -12,7 +12,7 @@
                 type: String,
                 required: true
             }
-        }
+        },
         data () {
             return{
 
