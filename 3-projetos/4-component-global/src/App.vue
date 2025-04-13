@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <app-pai /> <!-- O component está sendo chamado globalmente. ele foi criado globalmente no arquivo main -->
   </div>
 </template>
 
