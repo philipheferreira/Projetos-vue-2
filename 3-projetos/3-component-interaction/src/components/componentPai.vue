@@ -2,7 +2,7 @@
     <div>
         <componentFilho1 /> <!-- O component pode ser chamado pelo nome definido no codigo -->
         <component-filho1 /> <!-- Ou pela nomenclatura dada pela separação de letras maisculas -->
-        <app-component-filho2 />
+        <app-component-filho2 /> <!-- Nome criado para o component 2 e usado para a chamada -->
     </div>
 </template>
 
