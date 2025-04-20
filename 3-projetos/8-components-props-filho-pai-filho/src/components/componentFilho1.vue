@@ -15,9 +15,10 @@
                 required: true
             }
         },
-        data () {
-            return{
-
+        methods: {
+            reiniciarNome(){
+                let novoValorNome = 'Philiphe Siqueira Ferreira'
+                this.$emit('comando-reiniciar-nome', novoValorNome)
             }
         }
     }

@@ -1,6 +1,8 @@
 <template>
     <div>
         {{ nomeLocal2 }}
+
+        <button @click="reiniciarNome">Reiniciar Nome</button>
     </div>
 </template>
 
@@ -13,9 +15,10 @@
                 required: true
             }
         },
-        data () {
-            return{
-
+        methods: {
+            reiniciarNome(){
+                let novoValorNome = 'Philiphe Siqueira Ferreira'
+                this.$emit('comando-reiniciar-nome', novoValorNome)
             }
         }
     }

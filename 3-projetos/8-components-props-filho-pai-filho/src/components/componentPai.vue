@@ -3,8 +3,8 @@
 
         <button @click="alterarNome"> Alterar Nome </button>
 
-        <component-filho1 :nomeLocal1="nome" />
-        <component-filho2 :nomeLocal2="nome" />
+        <component-filho1 :nomeLocal1="nome" @comando-reiniciar-nome="nome = $event"/>
+        <component-filho2 :nomeLocal2="nome" @comando-reiniciar-nome="nome = $event"/>
     </div>
 </template>
 
