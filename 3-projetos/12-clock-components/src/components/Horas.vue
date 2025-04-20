@@ -1,11 +1,10 @@
 <template>
-    <div>
+    <div class="horas">
         {{ hora }}
     </div>
 </template>
 
 <script>
-
     export default {
         name: 'componentHoras',
         mounted () {
@@ -27,8 +26,4 @@
 
 </script>
 
-<style>
 
-
-
-</style>

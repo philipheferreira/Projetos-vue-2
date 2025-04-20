@@ -11,7 +11,7 @@
     <div>
         <componentHora  @comando-atualizar-horas-local="atualizarHora" /> 
         <componentMinuto @comando-atualizar-minutos-local="atualizarMinutos" />
-         <componentSegundo @comando-atualizar-segundos-local="atualizarSegundo"/>
+        <componentSegundo @comando-atualizar-segundos-local="atualizarSegundo"/>
     
     {{ hora }} : {{ minuto }} : {{ segundo }}
     </div>
