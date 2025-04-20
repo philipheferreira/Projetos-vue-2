@@ -1,8 +1,10 @@
 <template>
 <div>
 
-    <filho1 :nomeLocal1="nome" />
-    <filho2 :nomeLocal2="nome" />
+    <button @click="alterarNome" >Alterar Nome</button>
+
+    <filho1 :nomeLocal1="nome" @comando-reiniciar-nome="nome = $event"/>
+    <filho2 :nomeLocal2="nome" @comando-reiniciar-nome="nome = $event"/>
 
 </div>
 </template>
@@ -20,6 +22,11 @@ import filho2 from './componentFilho2'
         data () {
             return{
                 nome: 'Philiphe Siqueira Ferreira'
+            }
+        },
+        methods: {
+            alterarNome(){
+                this.nome = "Jó Soares"
             }
         }
     }

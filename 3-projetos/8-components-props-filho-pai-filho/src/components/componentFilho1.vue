@@ -1,6 +1,8 @@
 <template>
     <div>
         {{ nomeLocal1 }}
+
+        <button @click="reiniciarNome"> Reiniciar Nome </button>
     </div>
 </template>
 
