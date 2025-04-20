@@ -4,6 +4,7 @@
     <div class="botoes">
       <botaoSoma :somaFn="adicionarContador" />
       <botaoSub :subFn="subtrairContador" />
+      <botaoReset :resetFn="resetar" />
     </div>
   </div>
 </template>
@@ -11,10 +12,11 @@
 <script>
 import botaoSoma from './components/botaoSoma'
 import botaoSub from './components/botaoSub'
+import botaoReset from './components/botaoReset'
 
 export default {
   name: 'App',
-  components: {botaoSoma, botaoSub},
+  components: {botaoSoma, botaoSub, botaoReset},
   data () {
     return{
       contador: 0
@@ -26,6 +28,9 @@ export default {
     },
     subtrairContador(){
       this.Contador--
+    },
+    resetar(){
+      this.contador = 0
     }
   }
 }
