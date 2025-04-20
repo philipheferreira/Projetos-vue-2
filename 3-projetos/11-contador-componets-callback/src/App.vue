@@ -27,7 +27,7 @@ export default {
       this.contador++
     },
     subtrairContador(){
-      this.Contador--
+      this.contador--
     },
     resetar(){
       this.contador = 0
