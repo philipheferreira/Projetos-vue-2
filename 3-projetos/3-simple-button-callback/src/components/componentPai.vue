@@ -1,7 +1,6 @@
 <template>
     <div>
-        alguma coisa pai
-        <component-filho></component-filho>
+        <component-filho :alertaFn="metodoAlerta"></component-filho> <!-- A funcionalidade atribui para o props alertaFn o metodo metodoAlerta-->
     </div>
 </template>
 
@@ -9,7 +8,12 @@
     import componentFilho from './componentFilho'
     export default{
         name:'componentPai',
-        components: {componentFilho}
+        components: {componentFilho},
+        methods:{
+            metodoAlerta(){ // metodo criado no pai que ira ser ativado pelo component filho
+                alert("Componente filho está conectado e funcionando")
+            }
+        }
     }
 
 </script>
