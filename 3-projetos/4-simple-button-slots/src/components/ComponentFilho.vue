@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <slot>
         </slot> <!-- Declarando um slot sem nome para receber a chamada do outro component -->
     </div>
@@ -11,5 +11,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+    .container button{
+        color: blueviolet;
+        background-color: blue;
+    }
 </style>
