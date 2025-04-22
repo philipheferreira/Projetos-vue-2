@@ -13,6 +13,7 @@
                 <botao-numero2 :pressionarFn="pressionar"/>
                 <botao-numero3 :pressionarFn="pressionar"/>
                 <botao-numero0 :pressionarFn="pressionar"/>
+                <botao-soma :pressionarFn="pressionarBotaoSoma"/>
             </div>
         </div>
     </div>
@@ -29,6 +30,7 @@ import botaoNumero6 from './botoesNumeros/botao6'
 import botaoNumero7 from './botoesNumeros/botao7'
 import botaoNumero8 from './botoesNumeros/botao8'
 import botaoNumero9 from './botoesNumeros/botao9'
+import botaoSoma from './botoesOperacoes/botaoSoma'
 
 
     export default {
@@ -43,7 +45,8 @@ import botaoNumero9 from './botoesNumeros/botao9'
             botaoNumero6,
             botaoNumero7,
             botaoNumero8,
-            botaoNumero9
+            botaoNumero9,
+            botaoSoma
         },
         data () {
             return{
@@ -63,7 +66,19 @@ import botaoNumero9 from './botoesNumeros/botao9'
             },
             pressionar(valor){
                 this.display += valor
-            }
+            },
+            pressionarBotaoSoma(){
+                this.display += '+'
+            },
+            pressionarBotaoSun(){
+                this.display += '-'
+            },
+            pressionarBotaoMult(){
+                this.display += '*'
+            },
+            pressionarBotaoDiv(){
+                this.display += '/'
+            },
         }
     }
 </script>
