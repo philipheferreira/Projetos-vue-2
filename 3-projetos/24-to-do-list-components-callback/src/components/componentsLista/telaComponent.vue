@@ -1,6 +1,6 @@
 <template>
     <div>
-
+        Chamada do component tela
     </div>
 </template>
 
