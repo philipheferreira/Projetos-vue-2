@@ -4,10 +4,16 @@
 </template>
 
 <script>
-
+import botaoReset from './components/botaoReset.vue'
+import botaoSub from './components/botaoSub.vue'
+import botaoSoma from './components/botaoSoma.vue'
 export default {
   name: 'App',
-  components: {}
+  components: {
+    botaoReset,
+    botaoSub,
+    botaoSoma
+  }
 }
 </script>
 
