@@ -1,6 +1,8 @@
 <template>
     <div>
-        <component nomeLocal="Philiphe Ferreira" :is="componentNome" />
+        <component :nomeLocal="nome" :is="componentNome" /> <!-- Component tem uma chamada geral, 
+        o is seleciona o component entre os pre existentes, que no caso é a variavel componentNome que dentro
+        dela possui o ComponentFilho -->
     </div>
 </template>
 
@@ -12,6 +14,7 @@ export default {
     data () {
         return{ 
             componentNome: 'ComponentFilho',
+            nome: 'Philiphe Siqueira Ferreira' 
         }
     }
 }
