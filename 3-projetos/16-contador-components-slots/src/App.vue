@@ -13,6 +13,20 @@ export default {
     botaoReset,
     botaoSub,
     botaoSoma
+  },
+  data () {
+    return{
+      contador: 0
+    }
+  },
+  adicionarContador(){
+
+  },
+  subtrairContador(){
+
+  },
+  resetar(){
+    this.contador = 0
   }
 }
 </script>
