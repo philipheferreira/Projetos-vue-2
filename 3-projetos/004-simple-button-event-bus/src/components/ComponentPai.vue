@@ -17,9 +17,9 @@ export default {
         ComponentFilho
     },
     created() {
-        barramento.$on('comando-alterar-nome', (nome)=> { /* barramento.$on está recebendo a informação pelo barramento, 
-            usando o emit, que o nome é comando-alterar-nome para identificar */
-            this.nome = nome
+        barramento.$on('comando-alterar-nome', (nomeLocalRecebido)=> { /* barramento.$on está recebendo a informação pelo barramento, 
+            usando o emit do component filho, que o nome é comando-alterar-nome para identificar */
+            this.nome = nomeLocalRecebido
         })
     },
     data () {

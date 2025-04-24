@@ -10,8 +10,9 @@ export default {
     name: 'componentFilho', // não precisa criar a aba props pois o barramento está fazendo a comunicação, não precisa fazer a ponta de resposta do props
     methods:{
         alterarNome(){
-            let nome = 'Isabella Siqueira Ferrreira'
-            barramento.$emit('comando-alterar-nome', nome)
+            let nomeLocal = 'Isabella Siqueira Ferrreira'
+            barramento.$emit('comando-alterar-nome', nomeLocal) /* em vez de usar o this para selecionar a propria estancia, eu seleciono barramento pois é ele que será o canal
+            para enviar o emit com o resultado da variavel */
         }
     }
 }
