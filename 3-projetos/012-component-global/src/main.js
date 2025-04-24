@@ -4,7 +4,7 @@ import CompPai from '@/components/componentPai.vue' // @ => significa que a past
 
 Vue.config.productionTip = false
 
-Vue.component('app-pai', CompPai)
+Vue.component('app-pai', CompPai) // O componentPai é criado na renderização do Vue, e ganhou o nome de app-pai
 
 new Vue({
   render: h => h(App),

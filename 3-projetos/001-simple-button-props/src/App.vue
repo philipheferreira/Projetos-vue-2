@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-    <component-pai />
+    <component-pai /> <!-- Componente sendo chamado na aplicação e apresentado -->
   </div>
 </template>
 
 <script>
-import componentPai from './components/componentPai'
+import componentPai from './components/componentPai' // componente pai sendo importado e selecionado no caminho
 export default {
   name: 'App',
-  components: { componentPai }
+  components: { componentPai } // Componente sendo incluso para uso e nomeado
 }
 </script>
 
