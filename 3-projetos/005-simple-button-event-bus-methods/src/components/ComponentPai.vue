@@ -1,20 +1,25 @@
-<template>
+ <template>
     <div>
-
+        <component-filho :nomeLocal="nome"/>
+        {{ nome }}
     </div>
 </template>
 
 <script>
+import barramento from '@/barramento'
+import ComponentFilho from './ComponentFilho.vue'
 export default {
     name: 'componentPai',
     components: {
-
+        ComponentFilho
     },
-    create() {
-
+    created() {
+        barramento.$on('comando-alterar-nome', (nomeLocalRecebido)=> {
+            this.nome = nomeLocalRecebido
+        })
     },
     data () {
-        return{
+        return {
             nome: 'Philiphe Siqueira Ferreira'
         }
     }
