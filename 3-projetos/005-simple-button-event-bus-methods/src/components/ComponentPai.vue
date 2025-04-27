@@ -14,7 +14,7 @@ export default {
         ComponentFilho
     },
     created() {
-        barramento.$on('comando-alterar-nome', (nomeLocalRecebido)=> {
+        barramento.quandoNomeMudar( nomeLocalRecebido => {
             this.nome = nomeLocalRecebido
         })
     },

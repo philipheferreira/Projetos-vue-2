@@ -11,7 +11,7 @@ export default {
     methods:{
         alterarNome(){
             let nomeLocal = 'Isabella Siqueira Ferrreira'
-            barramento.$emit('comando-alterar-nome', nomeLocal)
+            barramento.alterarNome(nomeLocal)
         }
     }
 }
