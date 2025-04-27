@@ -1,13 +1,14 @@
 <template>
   <div id="app">
+    <componente />
   </div>
 </template>
 
 <script>
-
+import Componente from './components/operatedComputed'
 export default {
   name: 'App',
-  components: {}
+  components: {Componente}
 }
 </script>
 
