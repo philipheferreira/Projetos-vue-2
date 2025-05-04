@@ -1,7 +1,9 @@
 <template>
     <div>
         Component Contador
-        <p>Contador: {{ contador }}</p>
+        <p>Contador: {{ contadorLocal }}</p>
+        <p>Contador Mais: {{ contadorMaisLocal }}</p>
+        <p>Contador Menos: {{ contadorMenosLocal }}</p>
         <button @click="somarLocalmente">Somar</button>
         <button @click="subtrairLocalmente">Subtrair</button>
     </div>
@@ -13,8 +15,18 @@ import { mapGetters } from 'vuex'
         name: 'contadorComponents',
         computed: {
             ...mapGetters({
-                contador: 'contador'
+                contadorLocal: 'contador',
+                contadorMaisLocal: 'contadorMais',
+                contadorMenosLocal: 'contadorMenos'
             })
+        },
+        methods: {
+            somarLocalmente() {
+                this.$store.dispatch('somar')
+            },
+            subtrairLocalmente() {
+                this.$store.dispatch('subtrair')
+            }
         }
     }
 </script>
