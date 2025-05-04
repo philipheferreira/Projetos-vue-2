@@ -16,7 +16,7 @@ const store = new Vuex.Store({
           state.contador--
         }
     },
-    actions: {
+    actions: { // permite utilizar os comandos dispacth para realizar as operações
         somar({ commit }) {
             commit('somar') // o nome precisa ser o mesmo da mutation
         },
@@ -24,7 +24,7 @@ const store = new Vuex.Store({
           commit('subtrair')
         }
     },
-    getters: {
+    getters: { // pega as infos dentro dos state para realizar um repasse com alguma regra, nesse caso ele repassa só a info dentro do state
         contador: state => state.contador
     }
 })
