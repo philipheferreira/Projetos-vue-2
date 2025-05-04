@@ -1,0 +1,25 @@
+Para inicializar um projeto é bom se atentar com os comandos de CMD para começar o projeto. O primeiro comando é para verificar a versão caso esteja usando o nvm:
+* nvm ls
+
+Recomendado usar a versão a cima de 20. Para instalar é só usar o comando:
+* nvm install 20
+
+Depois disso é só usar o comando para utilizar: 
+* nvm use 20
+
+Em seguida tem que instalar o vue nessa versão do node do nvm que é a 20. Depois disso é só usar o comando de criar o projeto vue:
+* vue create nome-do-projeto (Não pode ter letras maiúsculas no nome do projeto e nem espaço)
+
+Em seguida é só inicializar o projeto: 
+* npm run serve
+
+Nesse capitulo especifico é necessário instalar o Vuex que é o pacote de controle de estado do vue. Para instalar ele é só usar o comando a baixo:
+
+* npm install vuex@3
+
+
+* No projeto tem a pasta component que é onde tem todos os components criados para serem chamados; 
+* O arquivo app.vue que estarta o projeto e é declarado no arquivo main.js para fazer isso;
+* O arquivo main.js que adiciona os projetos necessários ou que precisam ser declarados para serem chamadados
+* O arquivo package.json que tem tudo declarado sobre o projeto
+* O package-lock.json que tem tudo salvo sobre o projeto para baixar ou atualizar quando usar o comando npm install para as dependências
