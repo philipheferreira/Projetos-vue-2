@@ -1,0 +1,22 @@
+ Usar apenas o CSS do Bootstrap (Mais simples)
+Se você só quer usar as classes do Bootstrap (como container, row, btn btn-primary) e não se importa em não ter os componentes interativos prontos (como abre/fecha modal via JS), instale apenas o CSS.
+
+1. Instale o Bootstrap:
+
+	npm install bootstrap
+
+2. Importe no projeto:
+Abra o arquivo src/main.js e adicione a linha de importação do CSS do Bootstrap:
+
+	import Vue from 'vue'
+	import App from './App.vue'
+	// Adicione esta linha abaixo:
+	import 'bootstrap/dist/css/bootstrap.min.css'
+
+	Vue.config.productionTip = false
+
+	new Vue({
+  		render: h => h(App),
+	}).$mount('#app')
+
+Pronto! Você já pode usar as classes do Bootstrap nos seus arquivos .vue.
