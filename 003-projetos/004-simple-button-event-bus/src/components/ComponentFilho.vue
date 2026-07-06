@@ -7,7 +7,7 @@
 <script>
 import barramento from '@/barramento' // o Arroba significa que vai linkar com a raiz do projeto, que é o src
 export default {
-    name: 'componentFilho', // não precisa criar a aba props pois o barramento está fazendo a comunicação, não precisa fazer a ponta de resposta do props
+    name: 'componentUm', // não precisa criar a aba props pois o barramento está fazendo a comunicação, não precisa fazer a ponta de resposta do props
     methods:{
         alterarNome(){
             let nomeLocal = 'Isabella Siqueira Ferrreira'
