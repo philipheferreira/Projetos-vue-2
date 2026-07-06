@@ -1,0 +1,32 @@
+Usar o BootstrapVue (🎉 Recomendado para Vue 2)
+O BootstrapVue transforma os componentes do Bootstrap em componentes nativos do Vue (ex: <b-button>, <b-modal>). Ele não usa jQuery, funciona perfeitamente com o Vue 2 e é a forma correta de trabalhar.
+
+1. Instale o Bootstrap e o BootstrapVue:
+
+	npm install bootstrap-vue bootstrap
+
+2. Configure no projeto:
+Abra o arquivo src/main.js e faça as seguintes alterações:
+
+	import Vue from 'vue'
+	import App from './App.vue'
+
+	// 1. Importe o BootstrapVue
+	import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
+	// 2. Importe os arquivos CSS (do Bootstrap normal e do BootstrapVue)
+	import 'bootstrap/dist/css/bootstrap.css'
+	import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+	// 3. Torne o BootstrapVue disponível no projeto
+	Vue.use(BootstrapVue)
+	// Opcional: Plugin de ícones
+	Vue.use(IconsPlugin)
+
+	Vue.config.productionTip = false
+
+	new Vue({
+  		render: h => h(App),
+	}).$mount('#app')
+
+
