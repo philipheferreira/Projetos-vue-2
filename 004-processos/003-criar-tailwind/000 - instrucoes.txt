@@ -1,0 +1,85 @@
+Integrar o Tailwind CSS com o Vue 2 é um processo um pouco diferente do Bootstrap. 
+Como o Tailwind é um framework "utility-first" (baseado em classes de utilidade), 
+ele precisa de um processo de build (usando o PostCSS) para escanear o seu código 
+e gerar apenas o CSS que você realmente vai usar.
+
+Assumindo que você criou seu projeto Vue 2 usando o Vue CLI (como mostramos na resposta 
+anterior), siga o passo a passo abaixo para instalar e configurar o Tailwind CSS (versão 3)
+ corretamente:
+
+Passo 1: Instalar as dependências
+Dentro da pasta do seu projeto Vue 2, rode o seguinte comando no terminal para instalar o Tailwind, o PostCSS e o Autoprefixer:
+
+	npm install -D tailwindcss postcss autoprefixer
+
+
+Passo 2: Criar o arquivo de configuração do Tailwind
+Agora, precisamos gerar o arquivo de configuração do Tailwind. Rode o comando:
+
+	npx tailwindcss init
+Isso vai criar um arquivo chamado tailwind.config.js na raiz do seu projeto.
+
+Passo 3: Configurar os caminhos do Tailwind (MUITO IMPORTANTE)
+Abra o arquivo tailwind.config.js que acabou de ser criado. Você precisa dizer ao Tailwind onde estão os seus arquivos Vue para que ele possa encontrar as classes (como bg-red-500, text-center) e gerá-las no CSS final.
+
+Substitua o conteúdo do arquivo por isso:
+
+	/** @type {import('tailwindcss').Config} */
+	module.exports = {
+	  content: [
+	    "./public/**/*.html",
+	    "./src/**/*.{vue,js,ts,jsx,tsx}",
+	  ],
+	  theme: {
+	    extend: {},
+	  },
+	  plugins: [],
+	}
+(A mágica acontece na linha "./src/**/*.{vue,js,ts,jsx,tsx}", que diz ao 
+Tailwind para olhar dentro de todos os arquivos .vue da pasta src).
+
+Passo 4: Configurar o PostCSS
+O Vue CLI usa o PostCSS nos bastidores. Precisamos dizer a ele para usar o Tailwind.
+
+Na raiz do seu projeto (mesma pasta do package.json), crie um arquivo chamado 
+exatamente postcss.config.js e adicione o seguinte código dentro dele:
+
+	module.exports = {
+	  plugins: {
+	    tailwindcss: {},
+	    autoprefixer: {},
+	  },
+	}
+
+Passo 5: Adicionar as diretrizes do Tailwind no seu CSS
+O Tailwind precisa injetar três camadas base de CSS no seu projeto.
+
+Abra o arquivo src/assets/css/main.css (se não existir, crie a pasta css 
+e o arquivo main.css dentro de src/assets) e adicione estas três linhas no 
+topo do arquivo:
+
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+	/* Seu CSS customizado pode vir aqui embaixo, se precisar */
+
+Passo 6: Importar o CSS no seu projeto
+Agora, vá no arquivo src/main.js e certifique-se de que o arquivo CSS que você 
+acabou de editar está sendo importado:
+
+	import Vue from 'vue'
+	import App from './App.vue'
+
+	// Importe o arquivo main.css aqui:
+	import './assets/css/main.css' 
+
+	Vue.config.productionTip = false
+
+	new Vue({
+	  render: h => h(App),
+	}).$mount('#app')
+
+
+
+
