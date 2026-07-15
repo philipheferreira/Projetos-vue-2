@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ComponentLocal></ComponentLocal> /* Chamada das infomacoes do html no component principal. O component App.vue foi selecionado
+    para renderizar a instancia principal do ambiente vue criado para esse projeto */
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ComponentLocal from '@/components/ComponentLocal.vue'; /* Caminho importado para utilizar o component */
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ComponentLocal /* Declaracao do component para realizar a operacao */
   }
 }
 </script>
