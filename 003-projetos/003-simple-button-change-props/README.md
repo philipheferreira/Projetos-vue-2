@@ -1,4 +1,4 @@
-# simple-button-props-sun-change-props
+# simple-button-change-props
 
 ## Project setup
 ```
