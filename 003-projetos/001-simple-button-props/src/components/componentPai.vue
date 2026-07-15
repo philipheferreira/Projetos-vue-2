@@ -1,3 +1,10 @@
+/* No Vue 2, os Props (abreviação de propriedades) são o mecanismo 
+fundamental para a passagem de dados de um componente pai para um 
+componente filho.
+
+Eles formam a base da comunicação unidirecional (one-way data 
+flow) no Vue. */
+
 <template>
     <div>
         <filho nomeLocal="Philiphe Ferreira" /> <!-- Componente pai passando uma info props para o componente filho -->

@@ -30,6 +30,10 @@
     }
 </script>
 
+/* Ao usar a sintaxe de objeto, você pode tirar proveito das funcionalidades avançadas do Vue 2.
+Tipos aceitos no Vue 2: String, Number, Boolean, Array, Object, Date, Function, Symbol, ou 
+qualquer construtor personalizado. */
+
 <style scoped>
 
 </style>
