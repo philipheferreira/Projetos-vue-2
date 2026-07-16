@@ -15,13 +15,16 @@ Opção B: Usar uma Prop como valor inicial e computá-la (Computed)
 
 <template>
     <div>
-        Eu sou o component filho
+        {{ nomeLocalComponentFilho }}
     </div>
 </template>
 
 <script>
     export default{
-        name: 'componentFilho'
+        name: 'componentFilho',
+        props: {
+            nomeLocalComponentFilho: String // declarando props dentro do filho para ser usado que recebe valor que vem do pai
+        }
     }
 </script>
 

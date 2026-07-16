@@ -1,7 +1,7 @@
 <template>
     <div>
-        Eu sou o componente pai
-        <ComponentFilho></ComponentFilho>
+        <button @click="alterarNome">Alterar nome pelo componente pai</button>
+        <ComponentFilho :nomeLocalComponentFilho="nomeCompletoLocalComponentPai"></ComponentFilho>
     </div>
 </template>
 
@@ -12,6 +12,16 @@ import ComponentFilho from './componentFilho.vue';
         name: 'ComponentPai',
         components:{
             ComponentFilho
+        },
+        data(){
+            return{
+                nomeCompletoLocalComponentPai: 'Philiphe Siqueira Ferreira'
+            }
+        },
+        methods: {
+            alterarNome() {
+                this.nomeCompletoLocalComponentPai = "Leticia Martins Wanzeller"
+            }
         }
     }
 </script>

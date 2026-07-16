@@ -1,12 +1,15 @@
 <template>
     <div>
-        Sou o component filho
+        {{ nomeLocalComponentFilho }}
     </div>
 </template>
 
 <script>
     export default{
-        name: 'componentFilho'
+        name: 'componentFilho',
+        props: {
+            nomeLocalComponentFilho: String
+        }
     }
 </script>
 
