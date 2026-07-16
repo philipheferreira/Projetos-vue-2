@@ -68,9 +68,14 @@ A única regra de ouro é ficar de olho no this ao usar funções assíncronas.
 
 */
 
+/* No caso desse codigo pratico a callback necessita que a props da funcionalidade
+seja declarada no componente filho, no componente pai tera o conteudo
+e o metodo que sera ativado para fazer funcionar */
 
 <template>
     <div>
+         {{ nomeLocalComponentFilho }}
+        <button @click="reiniciarNome">Reiniciar valor original Nome pelo componente filho usando callback</button>
         <button @click="alertaFn">Botão alerta component filho</button>
     </div>
 </template>
@@ -78,7 +83,15 @@ A única regra de ouro é ficar de olho no this ao usar funções assíncronas.
 <script>
     export default{
         name:'componentFilho',
-        props: { alertaFn: Function }
+        data(){
+            return{
+                nomeLocalComponentFilho: String
+            }
+        },
+        props: { 
+            alertaFn: Function,
+            reiniciarNome: Function
+         } // função criada para receber callback
     }
 </script>
 
