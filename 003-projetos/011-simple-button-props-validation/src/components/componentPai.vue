@@ -1,7 +1,7 @@
 <template>
     <div>
         <button @click="alterarNome">Alterar Nome</button>
-        <component-filho bind:nomeLocalComponentFilho1="nomeCompletoLocalComponentPai" :nomeLocalComponentFilho2="nomeCompletoLocalComponentPai" bind:nomeLocalComponentFilho3="nomeCompletoLocalComponentPai" :nomeLocalComponentFilho4="12314123"/> <!-- Nome local está esperando receber array ou string, como está recebendo numero retornara erro -->
+        <component-filho v-bind:nomeLocalComponentFilho1="nomeCompletoLocalComponentPai" :nomeLocalComponentFilho2="nomeCompletoLocalComponentPai" v-bind:nomeLocalComponentFilho3="nomeCompletoLocalComponentPai" :nomeLocalComponentFilho4="12314123"/> <!-- Nome local está esperando receber array ou string, como está recebendo numero retornara erro -->
     </div>
 </template>
 

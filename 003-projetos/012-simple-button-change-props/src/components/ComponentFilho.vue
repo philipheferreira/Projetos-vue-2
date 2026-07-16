@@ -16,6 +16,7 @@ Opção B: Usar uma Prop como valor inicial e computá-la (Computed)
 <template>
     <div>
         {{ nomeLocalComponentFilho }}
+        <p>Usando metodos para mudar a palavra vinda do componente pai: {{ inverterNome(nomeLocalComponentFilho) }}</p>
     </div>
 </template>
 
@@ -24,6 +25,11 @@ Opção B: Usar uma Prop como valor inicial e computá-la (Computed)
         name: 'componentFilho',
         props: {
             nomeLocalComponentFilho: String // declarando props dentro do filho para ser usado que recebe valor que vem do pai
+        },
+        methods: {
+            inverterNome(palavra){
+                return palavra.split('').reverse().join() //inverter o nome que foi passado, que está sendo usado palavra dentro de metodos
+            }
         }
     }
 </script>

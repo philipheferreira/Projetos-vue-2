@@ -1,7 +1,7 @@
 <template>
     <div>
         <button @click="alterarNome">Alterar nome pelo componente pai</button>
-        <ComponentFilho :nomeLocalComponentFilho="nomeCompletoLocalComponentPai"></ComponentFilho>
+        <ComponentFilho :nomeLocalComponentFilho="nomeCompletoLocalComponentPai" @comando-reiniciar-nome="nomeCompletoLocalComponentPai = $event"></ComponentFilho>
     </div>
 </template>
 
