@@ -1,6 +1,7 @@
 <template>
     <div>
-        <component-filho nomeLocal1="1" nomeLocal2="Philiphe Ferreira"/> <!-- Nome local está esperando receber array ou string, como está recebendo numero retornara erro -->
+        <button @click="alterarNome">Alterar Nome</button>
+        <component-filho bind:nomeLocalComponentFilho1="nomeCompletoLocalComponentPai" :nomeLocalComponentFilho2="nomeCompletoLocalComponentPai" bind:nomeLocalComponentFilho3="nomeCompletoLocalComponentPai" :nomeLocalComponentFilho4="12314123"/> <!-- Nome local está esperando receber array ou string, como está recebendo numero retornara erro -->
     </div>
 </template>
 
@@ -8,7 +9,17 @@
 import componentFilho from './componentFilho'
     export default{
         name: 'componentPai',
-        components: {componentFilho}
+        components: {componentFilho},
+        data(){
+            return {
+                nomeCompletoLocalComponentPai: 'Philiphe Siqueira Ferreira'
+            }
+        },
+        methods: {
+            alterarNome() {
+                this.nomeCompletoLocalComponentPai = 'Leticia Martins Wanzeller'
+            }
+        }
     }
 </script>
 

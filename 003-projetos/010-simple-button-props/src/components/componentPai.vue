@@ -7,7 +7,8 @@ flow) no Vue. */
 
 <template>
     <div>
-        <filho nomeLocal="Philiphe Ferreira" /> <!-- Componente pai passando uma info props para o componente filho -->
+        <button @click="alterarNome">Alterar nome no componente filho</button>
+        <filho :nomeLocalComponentFilho="nomeCompletoLocalComponentPai" /> <!-- Componente pai passando uma info props para o componente filho -->
     </div>
 </template>
 
@@ -17,6 +18,16 @@ import filho from './ComponentFilho' // importando componente filho no component
         name: 'ComponentPai',
         components: {
             filho // Chamando componente filho dentro da aplicação
+        },
+        data(){
+            return{
+                nomeCompletoLocalComponentPai: 'Philiphe Ferreira'
+            }
+        },
+        methods: {
+            alterarNome(){
+                this.nomeCompletoLocalComponentPai = 'Leticia Algo'
+            }
         }
     }
 </script>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        {{ nomeLocal }} <!-- Chamando props dentro do componte filho que tem o valor declarado dentro do componente pai -->
+        {{ nomeLocalComponentFilho }} <!-- Chamando props dentro do componte filho que tem o valor declarado dentro do componente pai -->
     </div>
 </template>
 
@@ -8,7 +8,7 @@
     export default {
         name: 'ComponentFilho',
         props: {
-            nomeLocal: String // declarando props dentro do filho para ser usado que recebe valor que vem do pai
+            nomeLocalComponentFilho: String // declarando props dentro do filho para ser usado que recebe valor que vem do pai
         }
         /* usei um array simples props: ['mensagem']. Isso funciona, mas é uma prática fraca para projetos 
 reais. O recomendado no Vue 2 é usar a sintaxe de objeto, pois permite validação */
