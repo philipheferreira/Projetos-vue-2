@@ -80,15 +80,19 @@ e o metodo que sera ativado para fazer funcionar */
     </div>
 </template>
 
+/* Como estou utilizando callback nao existe a necessidade de criar uma variavel local,
+entretanto ser necesserio declarar uma props no componente filho para receber o valor do component pai.
+A parte de funcionalidade da callback nao fica no componente filho, a logica, apenas a chamada 
+da funcao, a funcao em si esta no componente pai */
+
 <script>
     export default{
         name:'componentFilho',
-        data(){
-            return{
-                nomeLocalComponentFilho: String
-            }
-        },
         props: { 
+            nomeLocalComponentFilho: {
+                type: String,
+                required: true
+            },
             alertaFn: Function,
             reiniciarNome: Function
          } // função criada para receber callback

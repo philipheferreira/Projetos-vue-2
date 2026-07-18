@@ -23,7 +23,7 @@
                 this.nomeCompletoLocalComponentPai = "Leticia Martins Wanzeller"
             },
             reiniciarNomeUsandoCallback() {
-                this.nomeCompleto = 'Philiphe Siqueira Ferreira'
+                this.nomeCompletoLocalComponentPai = 'Philiphe Siqueira Ferreira'
             }
         }
     }

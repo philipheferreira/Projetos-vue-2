@@ -3,7 +3,7 @@
 Para entender bem, precisamos lembrar como o Vue funciona normalmente:
 
 Pai passa dados para Filho: Usa props.
-Filho avisa o Pai: Usa $emit.
+Filho avisa o Pai: Usa $emit ou uma callback.
 Mas e se dois componentes forem "irmãos" (estiverem lado a lado)? Ou se estiverem muito distantes na árvore de componentes? O Pai teria que repassar a mensagem manualmente, o que é trabalhoso. É aí que entra o Event Bus.
 
 A Analogia do Rádio
