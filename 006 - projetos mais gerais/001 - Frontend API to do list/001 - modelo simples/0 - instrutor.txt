@@ -1,0 +1,7 @@
+Ncessario instalar axios pela primeira vez com o seguinte comando
+
+	npm install axios
+
+depois apenas rodar com o comando
+
+	npm run serve
