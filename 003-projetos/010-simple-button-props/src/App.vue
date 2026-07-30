@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import componentPai from './components/componentPai' // componente pai sendo importado e selecionado no caminho
+import componentPai from './components/ComponentPai' // componente pai sendo importado e selecionado no caminho
 export default {
   name: 'App',
   components: { componentPai } // Componente sendo incluso para uso e nomeado
