@@ -2,7 +2,9 @@
     <div class="container">
         <h2>To-Do List</h2>
         <componente-tela @adicionar-tarefas-local="adicionarTarefas"></componente-tela> <!-- Link o valor da nova tarefa local repassando o valor da variavel para o metodo no componente pai -->
-        <lista-component :listaTarefasLocal="tarefas" @remover-tarefa-local="removerTarefa"></lista-component>
+        <lista-component :listaTarefasLocal="tarefas" @remover-tarefa-local="removerTarefa"></lista-component> /* listaTarefasLocal repassa a lista tarefas para o componente listaComponent
+        para armazenar as informacoes na variavel dentro desse component chamada de tarefaLocal> o @remover-tarefa-local ser um emit que recebe do filho e aciona o removerTarefa nesse component
+        acionando o methodo daqui, mas o gatilho esta presente no component filho */
     </div>
 </template>
 <script>
@@ -28,15 +30,6 @@ import ListaComponent from './componentesLista/listaComponent.vue'
 </script>
 
 <style scoped>
-
-    body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f4f4f4;
-    }
 
     .container {
         background: white;

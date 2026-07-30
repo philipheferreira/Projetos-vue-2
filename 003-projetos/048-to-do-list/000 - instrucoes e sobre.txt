@@ -1,0 +1,3 @@
+Funcionalidade basica de uma lista de tarefas.
+Tudo esta concentrado no componente list. Nada esta dividido, tudo esta concentrado da
+operacao list para as funcoes
