@@ -4,7 +4,7 @@
 
     <!-- FORMULÁRIO -->
     <div class="form-card">
-      <h2>{{ editIndex === -1 ? 'Adicionar Nova Pessoa' : 'Editar Pessoa' }}</h2>
+      <h2>{{ seletorEdit === -1 ? 'Adicionar Nova Pessoa' : 'Editar Pessoa' }}</h2>
       <form @submit.prevent="salvar">
         <div class="form-grid">
           <div class="form-group">
@@ -40,9 +40,9 @@
 
         <div class="form-actions">
           <button type="submit" class="btn btn-save">
-            {{ editIndex === -1 ? 'Salvar' : 'Atualizar' }}
+            {{ seletorEdit === -1 ? 'Salvar' : 'Atualizar' }}
           </button>
-          <button v-if="editIndex !== -1" type="button" @click="cancelar" class="btn btn-cancel">
+          <button v-if="seletorEdit !== -1" type="button" @click="cancelar" class="btn btn-cancel">
             Cancelar
           </button>
         </div>
@@ -107,7 +107,7 @@ export default {
         sobre: ''
       },
       // Variável para controlar se estamos criando (-1) ou editando (índice do array)
-      editIndex: -1
+      seletorEdit: -1
     };
   },
   methods: {
@@ -119,7 +119,7 @@ export default {
         return;
       }
 
-      if (this.editIndex === -1) {
+      if (this.seletorEdit === -1) {
         // CREATE: Adiciona uma nova pessoa gerando um ID único
         this.pessoa.id = Date.now();
         this.pessoas.push({ ...this.pessoa });
@@ -127,7 +127,7 @@ export default {
         // UPDATE: Atualiza a pessoa existente no array
         // O Vue 2 requer o $set ou splice para garantir a reatividade em índices específicos,
         // mas como estamos substituindo o objeto inteiro, o splice funciona perfeitamente.
-        this.pessoas.splice(this.editIndex, 1, { ...this.pessoa });
+        this.pessoas.splice(this.seletorEdit, 1, { ...this.pessoa });
       }
 
       this.limparFormulario();
@@ -138,7 +138,7 @@ export default {
       // Pega a pessoa do array e joga no formulário
       // Usamos o spread operator (...) para criar uma cópia e não alterar o original direto
       this.pessoa = { ...this.pessoas[index] };
-      this.editIndex = index;
+      this.seletorEdit = index;
       
       // Rola a tela para cima para o usuário ver o formulário
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -150,7 +150,7 @@ export default {
         this.pessoas.splice(index, 1);
         
         // Se a pessoa excluída era a que estava sendo editada, limpa o formulário
-        if (this.editIndex === index) {
+        if (this.seletorEdit === index) {
           this.limparFormulario();
         }
       }
@@ -167,7 +167,7 @@ export default {
         profissao: '',
         sobre: ''
       };
-      this.editIndex = -1;
+      this.seletorEdit = -1;
     },
 
     cancelar() {
