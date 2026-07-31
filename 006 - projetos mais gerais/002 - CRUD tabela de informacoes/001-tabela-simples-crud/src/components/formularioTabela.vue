@@ -92,7 +92,10 @@ export default {
   data() {
     return {
       // Array que guarda as pessoas (faz o papel do banco de dados por enquanto)
-      pessoas: [],
+      pessoas: [
+        {nome: 'Philiphe', sobrenome: 'Fereira', idade: 25, telefone: 91983355994, profissao: 'Desenvolvedor'},
+        {nome: 'Felipe', sobrenome: 'Wanzeller', idade: 25, telefone: 9198387551274, profissao: 'Escritor'}
+      ],
       // Objeto que é vinculado ao formulário
       pessoa: {
         id: null,
