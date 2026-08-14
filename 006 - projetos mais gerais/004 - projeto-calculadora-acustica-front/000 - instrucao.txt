@@ -1,0 +1,7 @@
+Para utilizar o sistema de rotas para o menu é necessário instalar o routers do vue, utilizando os comandos a baixo: 
+
+* npm i --save vue-router@3.0.2 -E
+
+ou
+
+* npm install vue-router@3
