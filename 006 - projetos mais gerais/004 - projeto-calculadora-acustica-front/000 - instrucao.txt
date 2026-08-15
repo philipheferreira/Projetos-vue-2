@@ -5,3 +5,19 @@ Para utilizar o sistema de rotas para o menu é necessário instalar o routers d
 ou
 
 * npm install vue-router@3
+
+Nesse projeto sera utilizado a aplicacao da formula: T60 = (0.161*V)/A
+
+
+
+Onde:
+
+T60: Tempo de reverberação (em segundos) - é o tempo que o som leva para 
+diminuir 60 dB após a fonte parar de emitir.
+V: Volume do ambiente em metros cúbicos (m3).
+
+0.161: Constante empírica (para o ar a 20°C).
+
+A: Área de Absorção Sonora Equivalente (em m2 Sabine). É calculada 
+multiplicando a área de cada superfície pelo seu coeficiente de 
+absorção (A=∑S⋅α).
