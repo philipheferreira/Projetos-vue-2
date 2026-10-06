@@ -87,18 +87,64 @@ export default {
 </script>
 
 <style>
-body { font-family: system-ui, sans-serif; background: #f4f5f7; }
-.container { max-width: 560px; margin: 40px auto; background: #fff; padding: 24px;
-             border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
-h1 { margin-top: 0; font-size: 1.4rem; }
-form { display: flex; gap: 8px; margin-bottom: 16px; }
-input[type=text] { flex: 1; padding: 8px 10px; border: 1px solid #ccc; border-radius: 6px; }
-button { cursor: pointer; border: none; border-radius: 6px; padding: 8px 12px;
-         background: #2f6fed; color: #fff; }
-button.excluir { background: #e5484d; margin-left: auto; }
-ul { list-style: none; padding: 0; margin: 0; }
-li { display: flex; align-items: center; gap: 10px; padding: 10px 0;
-     border-bottom: 1px solid #eee; }
-.concluida span { text-decoration: line-through; color: #999; }
-.erro { color: #e5484d; }
+  body { 
+    font-family: system-ui, sans-serif; 
+    background: #f4f5f7; 
+  }
+
+  .container { 
+    max-width: 560px; 
+    margin: 40px auto; 
+    background: #fff; 
+    padding: 24px;
+    border-radius: 10px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,.08); 
+  }
+  h1 { 
+    margin-top: 0; 
+    font-size: 1.4rem; 
+  }
+  form { 
+    display: flex; 
+    gap: 8px; 
+    margin-bottom: 16px; 
+  }
+
+  input[type=text] { 
+    flex: 1; 
+    padding: 8px 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 6px; 
+  }
+  button { 
+    cursor: pointer; 
+    border: none; 
+    border-radius: 6px; 
+    padding: 8px 12px;
+    background: #2f6fed; 
+    color: #fff; 
+  }
+  button.excluir { 
+    background: #e5484d; 
+    margin-left: auto; 
+  }
+  ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+  }
+  li { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    padding: 10px 0;
+    border-bottom: 1px solid #eee; 
+  }
+  .concluida span { 
+    text-decoration: line-through; 
+    color: #999; 
+  }
+  .erro { 
+    color: #e5484d; 
+  }
 </style>
